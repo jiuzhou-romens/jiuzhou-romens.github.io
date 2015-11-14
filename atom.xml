@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <title><![CDATA[Zhao Jiuzhou’s blog]]></title>
-  <subtitle><![CDATA[Walk steps step by step]]></subtitle>
+  <title><![CDATA[Geovyn的博客]]></title>
+  <subtitle><![CDATA[前方的道路，一步一步走…]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
   <updated>2015-11-13T09:00:43.000Z</updated>
