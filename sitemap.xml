@@ -2,6 +2,16 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
+    <loc>http://jiuzhou-romens.github.io.git/categories/index.html</loc>
+    <lastmod>2015-11-14T04:44:26.000Z</lastmod>
+  </url>
+  
+  <url>
+    <loc>http://jiuzhou-romens.github.io.git/tags/index.html</loc>
+    <lastmod>2015-11-14T04:42:16.000Z</lastmod>
+  </url>
+  
+  <url>
     <loc>http://jiuzhou-romens.github.io.git/2015/11/13/hello-world/</loc>
     <lastmod>2015-11-13T09:00:43.000Z</lastmod>
   </url>
