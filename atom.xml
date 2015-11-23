@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
   <title><![CDATA[Geovyn的博客]]></title>
-  <subtitle><![CDATA[前方的道路，一步一步走…]]></subtitle>
+  <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
   <updated>2015-11-20T06:58:25.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
-    <name><![CDATA[赵 九州]]></name>
+    <name><![CDATA[Jiuzhou zhao]]></name>
     <email><![CDATA[zhaojiuzhou@163.com#你的联系邮箱]]></email>
   </author>
   
