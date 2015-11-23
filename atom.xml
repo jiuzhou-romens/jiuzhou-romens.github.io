@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-23T07:53:57.000Z</updated>
+  <updated>2015-11-23T08:52:16.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -18,17 +18,15 @@
     <title><![CDATA[Hexo主题Yilia]]></title>
     <link href="http://jiuzhou-romens.github.io.git/2015/11/23/Hexo%E4%B8%BB%E9%A2%98/"/>
     <id>http://jiuzhou-romens.github.io.git/2015/11/23/Hexo主题/</id>
-    <published>2015-11-23T07:53:57.000Z</published>
-    <updated>2015-11-23T07:53:57.000Z</updated>
-    <content type="html"><![CDATA[<p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">hexo-theme-yilia</a> 是为 <a href="https://github.com/tommy351/hexo" target="_blank" rel="external">hexo</a> 2.4+制作的主题。<br>响应式设计，风格简约。</p>
-<p>终于从octopress迁移到hexo。Yilia是自己设计的主题，分享之，有爱请自取。关于主题：</p>
+    <published>2015-11-23T08:52:16.000Z</published>
+    <updated>2015-11-23T08:52:16.000Z</updated>
+    <content type="html"><![CDATA[<p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">hexo-theme-yilia</a> 是为 <a href="https://github.com/tommy351/hexo" target="_blank" rel="external">hexo</a> 2.4+制作的主题。<br>响应式设计，风格简约。<br><a id="more"></a><br>终于从octopress迁移到hexo。Yilia是自己设计的主题，分享之，有爱请自取。关于主题：</p>
 <ol>
 <li>我喜欢简约。所以标签云，搜索框都拿掉了</li>
 <li>接地气一点。所以用上了jiathis分享，友言评论，以及baidu的cdn</li>
 <li>让大家把注意力放到内容上。这是本主题设计初衷</li>
 <li>主题不支持IE6，7，8。以后也不会</li>
 </ol>
-<a id="more"></a>
 <p>一、使用</p>
 <p><strong>1. 安装</strong></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ git <span class="built_in">clone</span> https://github.com/litten/hexo-theme-yilia.git themes/yilia</span><br></pre></td></tr></table></figure>
@@ -46,14 +44,7 @@
 <p>主题配置文件在主目录下的<code>_config.yml</code>：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"># Header&#10;menu:&#10;  &#20027;&#39029;: /&#10;  &#25152;&#26377;&#25991;&#31456;: /archives&#10;  # &#38543;&#31508;: /tags/&#38543;&#31508;&#10;&#10;# SubNav&#10;subnav:&#10;  github: &#34;https://github.com/litten&#34;&#10;  weibo: &#34;http://weibo.com/litten225&#34;&#10;  rss: &#34;http://feed.feedsky.com/litten&#34;&#10;  # facebook: &#34;/&#34;&#10;  # google: &#34;/&#34;&#10;  # twitter: &#34;/&#34;&#10;  # linkedin: &#34;/&#34;&#10;&#10;rss: /atom.xml&#10;&#10;# Content&#10;excerpt_link: more&#10;fancybox: true&#10;&#10;# Miscellaneous&#10;&#10;favicon: /favicon.png&#10;&#10;avatar: &#34;https://avatars2.githubusercontent.com/u/2024949?v=2&#38;s=150&#34;&#10;share: true&#10;duoshuo: true</span><br></pre></td></tr></table></figure>]]></content>
     <summary type="html">
-    <![CDATA[<p><a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a> 是为 <a href="https://github.com/tommy351/hexo">hexo</a> 2.4+制作的主题。<br>响应式设计，风格简约。</p>
-<p>终于从octopress迁移到hexo。Yilia是自己设计的主题，分享之，有爱请自取。关于主题：</p>
-<ol>
-<li>我喜欢简约。所以标签云，搜索框都拿掉了</li>
-<li>接地气一点。所以用上了jiathis分享，友言评论，以及baidu的cdn</li>
-<li>让大家把注意力放到内容上。这是本主题设计初衷</li>
-<li>主题不支持IE6，7，8。以后也不会</li>
-</ol>]]>
+    <![CDATA[<p><a href="https://github.com/litten/hexo-theme-yilia">hexo-theme-yilia</a> 是为 <a href="https://github.com/tommy351/hexo">hexo</a> 2.4+制作的主题。<br>响应式设计，风格简约。<br>]]>
     
     </summary>
     
@@ -65,11 +56,11 @@
   
   <entry>
     <title><![CDATA[Hello World]]></title>
-    <link href="http://jiuzhou-romens.github.io.git/2015/11/20/Hello%20World/"/>
-    <id>http://jiuzhou-romens.github.io.git/2015/11/20/Hello World/</id>
-    <published>2015-11-20T06:58:25.000Z</published>
-    <updated>2015-11-20T06:58:25.000Z</updated>
-    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+    <link href="http://jiuzhou-romens.github.io.git/2015/11/23/Hello%20World/"/>
+    <id>http://jiuzhou-romens.github.io.git/2015/11/23/Hello World/</id>
+    <published>2015-11-23T08:51:53.000Z</published>
+    <updated>2015-11-23T08:51:53.000Z</updated>
+    <content type="html"><![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.<br><a id="more"></a></p>
 <h2 id="Quick_Start">Quick Start</h2><h3 id="Create_a_new_post">Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo new <span class="string">"My New Post"</span></span><br></pre></td></tr></table></figure>
 <p>More info: <a href="http://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
 <h3 id="Run_server">Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ hexo server</span><br></pre></td></tr></table></figure>
@@ -80,7 +71,8 @@
 <p>More info: <a href="http://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Welcome to <a href="http://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="http://hexo.io]]>
+    <![CDATA[<p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>]]>
+    
     </summary>
     
       <category term="Hexo" scheme="http://jiuzhou-romens.github.io.git/tags/Hexo/"/>
@@ -92,8 +84,9 @@
     <link href="http://jiuzhou-romens.github.io.git/2015/11/20/Swift%E5%9F%BA%E7%A1%80%E9%83%A8%E5%88%86/"/>
     <id>http://jiuzhou-romens.github.io.git/2015/11/20/Swift基础部分/</id>
     <published>2015-11-20T05:50:12.000Z</published>
-    <updated>2015-11-21T00:54:58.000Z</updated>
-    <content type="html"><![CDATA[<p>Swift 是一门开发 iOS, OS X 和 watchOS 应用的新语言。然而，如果你有 C 或者 Objective-C 开发经验的话，你会发现 Swift 的很多内容都是你熟悉的。<br>Swift 包含了 C 和 Objective-C 上所有基础数据类型，Int表示整型值；Double和Float表示浮点型值；Bool是布尔型值；String是文本型数据。Swift还提供了三个基本的集合类型，Array，Set和Dictionary，详见集合类型。就像 C 语言一样，Swift 使用变量来进行存储并通过变量名来关联值。在Swift中，广泛的使用着值不可变的变量，它们就是常量，而且比 C 语言的常量更强大。在 Swift 中，如果你要处理的值不需要改变，那使用常量可以让你的代码更加安全并且更清晰地表达你的意图。<br>除了我们熟悉的类型，Swift 还增加了 Objective-C 中没有的高阶数据类型比如元组（Tuple）。元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。<br>Swift 还增加了可选（Optional）类型，用于处理值缺失的情况。可选表示“那儿有一个值，并且它等于 x ”或者“那儿没有值”。可选有点像在 Objective-C 中使用nil，但是它可以用在任何类型上，不仅仅是类。可选类型比 Objective-C 中的nil指针更加安全也更具表现力，它是 Swift 许多强大特性的重要组成部分。<br>Swift 是一门类型安全的语言，可选类型就是一个很好的例子。Swift 可以让你清楚地知道值的类型。如果你的代码期望得到一个String，类型安全会阻止你不小心传入一个Int。你可以在开发阶段尽早发现并修正错误。<br><a id="more"></a><br><strong>类型安全和类型推断</strong></p>
+    <updated>2015-11-23T08:51:40.000Z</updated>
+    <content type="html"><![CDATA[<p>Swift 是一门开发 iOS, OS X 和 watchOS 应用的新语言。然而，如果你有 C 或者 Objective-C 开发经验的话，你会发现 Swift 的很多内容都是你熟悉的。<br><a id="more"></a><br>Swift 包含了 C 和 Objective-C 上所有基础数据类型，Int表示整型值；Double和Float表示浮点型值；Bool是布尔型值；String是文本型数据。Swift还提供了三个基本的集合类型，Array，Set和Dictionary，详见集合类型。就像 C 语言一样，Swift 使用变量来进行存储并通过变量名来关联值。在Swift中，广泛的使用着值不可变的变量，它们就是常量，而且比 C 语言的常量更强大。在 Swift 中，如果你要处理的值不需要改变，那使用常量可以让你的代码更加安全并且更清晰地表达你的意图。<br>除了我们熟悉的类型，Swift 还增加了 Objective-C 中没有的高阶数据类型比如元组（Tuple）。元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。<br>Swift 还增加了可选（Optional）类型，用于处理值缺失的情况。可选表示“那儿有一个值，并且它等于 x ”或者“那儿没有值”。可选有点像在 Objective-C 中使用nil，但是它可以用在任何类型上，不仅仅是类。可选类型比 Objective-C 中的nil指针更加安全也更具表现力，它是 Swift 许多强大特性的重要组成部分。<br>Swift 是一门类型安全的语言，可选类型就是一个很好的例子。Swift 可以让你清楚地知道值的类型。如果你的代码期望得到一个String，类型安全会阻止你不小心传入一个Int。你可以在开发阶段尽早发现并修正错误。</p>
+<p><strong>类型安全和类型推断</strong></p>
 <blockquote>
 <p>Swift 是一个类型安全（type safe）的语言。类型安全的语言可以让你清楚地知道代码要处理的值的类型。如果你的代码需要一个String，你绝对不可能不小心传进去一个Int。</p>
 </blockquote>
@@ -111,7 +104,7 @@
 <p>原始值3没有显式声明类型，而表达式中出现了一个浮点字面量，所以表达式会被推断为Double类型。</p>
 ]]></content>
     <summary type="html">
-    <![CDATA[<p>Swift 是一门开发 iOS, OS X 和 watchOS 应用的新语言。然而，如果你有 C 或者 Objective-C 开发经验的话，你会发现 Swift 的很多内容都是你熟悉的。<br>Swift 包含了 C 和 Objective-C 上所有基础数据类型，Int表示整型值；Double和Float表示浮点型值；Bool是布尔型值；String是文本型数据。Swift还提供了三个基本的集合类型，Array，Set和Dictionary，详见集合类型。就像 C 语言一样，Swift 使用变量来进行存储并通过变量名来关联值。在Swift中，广泛的使用着值不可变的变量，它们就是常量，而且比 C 语言的常量更强大。在 Swift 中，如果你要处理的值不需要改变，那使用常量可以让你的代码更加安全并且更清晰地表达你的意图。<br>除了我们熟悉的类型，Swift 还增加了 Objective-C 中没有的高阶数据类型比如元组（Tuple）。元组可以让你创建或者传递一组数据，比如作为函数的返回值时，你可以用一个元组可以返回多个值。<br>Swift 还增加了可选（Optional）类型，用于处理值缺失的情况。可选表示“那儿有一个值，并且它等于 x ”或者“那儿没有值”。可选有点像在 Objective-C 中使用nil，但是它可以用在任何类型上，不仅仅是类。可选类型比 Objective-C 中的nil指针更加安全也更具表现力，它是 Swift 许多强大特性的重要组成部分。<br>Swift 是一门类型安全的语言，可选类型就是一个很好的例子。Swift 可以让你清楚地知道值的类型。如果你的代码期望得到一个String，类型安全会阻止你不小心传入一个Int。你可以在开发阶段尽早发现并修正错误。<br>]]>
+    <![CDATA[<p>Swift 是一门开发 iOS, OS X 和 watchOS 应用的新语言。然而，如果你有 C 或者 Objective-C 开发经验的话，你会发现 Swift 的很多内容都是你熟悉的。<br>]]>
     
     </summary>
     
