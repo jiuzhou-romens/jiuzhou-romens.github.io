@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-24T06:39:59.000Z</updated>
+  <updated>2015-11-24T10:30:28.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -13,6 +13,29 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Xcode插件管理]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2015/11/24/Xcode--%E6%8F%92%E4%BB%B6%E7%AE%A1%E7%90%86/"/>
+    <id>http://jiuzhou-romens.github.io.git/2015/11/24/Xcode--插件管理/</id>
+    <published>2015-11-24T10:30:28.000Z</published>
+    <updated>2015-11-24T10:30:28.000Z</updated>
+    <content type="html"><![CDATA[<h1 id="安装">安装</h1><p>终端输入:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh</span><br></pre></td></tr></table></figure></p>
+<a id="more"></a>
+<h1 id="卸载">卸载</h1><p>删除插件:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin</span><br></pre></td></tr></table></figure></p>
+<p>删除缓存数据:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/Library/Application\ Support/Alcatraz</span><br></pre></td></tr></table></figure></p>
+<p><a href="http://www.cocoachina.com/industry/20130918/7022.html" target="_blank" rel="external">那些不能错过的Xcode插件</a><br><a href="http://www.bubuko.com/infodetail-963903.html" target="_blank" rel="external">插件无法运行</a></p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h1 id="安装">安装</h1><p>终端输入:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh</span><br></pre></td></tr></table></figure></p>]]>
+    
+    </summary>
+    
+      <category term="Alcatraz" scheme="http://jiuzhou-romens.github.io.git/tags/Alcatraz/"/>
+    
+      <category term="Xcode" scheme="http://jiuzhou-romens.github.io.git/tags/Xcode/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Markdown学习指南]]></title>
