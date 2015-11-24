@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-24T03:39:54.000Z</updated>
+  <updated>2015-11-24T06:39:59.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Markdown学习指南]]></title>
     <link href="http://jiuzhou-romens.github.io.git/2015/11/24/Markdown/"/>
     <id>http://jiuzhou-romens.github.io.git/2015/11/24/Markdown/</id>
-    <published>2015-11-24T03:39:54.000Z</published>
-    <updated>2015-11-24T03:39:54.000Z</updated>
+    <published>2015-11-24T06:39:59.000Z</published>
+    <updated>2015-11-24T06:39:59.000Z</updated>
     <content type="html"><![CDATA[<p> Markdown的语法已经足够简单，但是现有的<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法</a>说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">作业部落</a>到<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 <code>Markdown</code> 语法。<br> <a id="more"></a></p>
 <h1 id="标题">标题</h1><p>这是最为常用的格式，在<code>Markdown</code>中，你只需要在文本前面加上<code>#</code>号，标题分级，增加<code>#</code>即可。</p>
 <blockquote>
@@ -40,7 +40,7 @@
 </blockquote>
 <p>注意：<code>-</code> <code>1.</code>和参考文本之间保留一个空格。</p>
 <h1 id="链接和图片">链接和图片</h1><p>在<code>Markdown</code>中，插入链接你只需要使用<code>[显示文本](链接地址)</code> 这样的语法即可，例如：<br><a href="http://www.geovyn.com" target="_blank" rel="external">我的博客</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的博客](http://www.geovyn.com)</span><br></pre></td></tr></table></figure></p>
-<p>在<code>Markdown</code>中，插入图片你只需要使用 <code>![](图片地址)</code> 这样的语法即可，例如：<br><img src="http://0.0.0.0:4000/images/avatar.jpg" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">4000</span>/images/avatar.jpg)</span><br></pre></td></tr></table></figure></p>
+<p>在<code>Markdown</code>中，插入图片你只需要使用 <code>![](图片地址)</code> 这样的语法即可，例如：<br><img src="http://www.geovyn.com/images/avatar.jpg" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](http://www.geovyn.com/images/avatar.jpg)</span><br></pre></td></tr></table></figure></p>
 <h1 id="引用">引用</h1><p>写作的时候需要引用他人的文字，这个时候引用这个格式就很有必要了，在<code>Markdown</code>中，你只需要在你希望引用的文字前面加上<code>&gt;</code>就好了。例如：</p>
 <blockquote>
 <p>床前明月光<br>疑是地上霜<br>举头望明月<br>低头思故乡</p>
