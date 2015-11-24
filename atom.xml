@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-23T08:52:16.000Z</updated>
+  <updated>2015-11-24T03:39:54.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -15,11 +15,86 @@
   <generator uri="http://hexo.io/">Hexo</generator>
   
   <entry>
+    <title><![CDATA[Markdown学习指南]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2015/11/24/Markdown/"/>
+    <id>http://jiuzhou-romens.github.io.git/2015/11/24/Markdown/</id>
+    <published>2015-11-24T03:39:54.000Z</published>
+    <updated>2015-11-24T03:39:54.000Z</updated>
+    <content type="html"><![CDATA[<p> Markdown的语法已经足够简单，但是现有的<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法</a>说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">作业部落</a>到<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 <code>Markdown</code> 语法。<br> <a id="more"></a></p>
+<h1 id="标题">标题</h1><p>这是最为常用的格式，在<code>Markdown</code>中，你只需要在文本前面加上<code>#</code>号，标题分级，增加<code>#</code>即可。</p>
+<blockquote>
+<h1 id="一级标题">一级标题</h1><h2 id="二级标题">二级标题</h2><h3 id="三级标题">三级标题</h3><h4 id="四级标题">四级标题</h4><h5 id="五级标题">五级标题</h5><h6 id="六级标题">六级标题</h6></blockquote>
+<p>注意：<code>#</code>和<code>一级标题</code>之间保留一个空格，这才是<code>Markdown</code>的标准写法。</p>
+<h1 id="列表">列表</h1><p>列表格式也很常用，在 Markdown 中，你只需要在文字前面加上<code>-</code>(无序)或者<code>1.</code>(有序)就可以了，例如：</p>
+<blockquote>
+<ul>
+<li>参考文本1</li>
+<li>参考文本2</li>
+<li>参考文本3</li>
+</ul>
+<ol>
+<li>参考文本1</li>
+<li>参考文本2</li>
+<li>参考文本3</li>
+</ol>
+</blockquote>
+<p>注意：<code>-</code> <code>1.</code>和参考文本之间保留一个空格。</p>
+<h1 id="链接和图片">链接和图片</h1><p>在<code>Markdown</code>中，插入链接你只需要使用<code>[显示文本](链接地址)</code> 这样的语法即可，例如：<br><a href="http://www.geovyn.com" target="_blank" rel="external">我的博客</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的博客](http://www.geovyn.com)</span><br></pre></td></tr></table></figure></p>
+<p>在<code>Markdown</code>中，插入图片你只需要使用 <code>![](图片地址)</code> 这样的语法即可，例如：<br><img src="http://0.0.0.0:4000/images/avatar.jpg" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](http://<span class="number">0.0</span>.<span class="number">0.0</span>:<span class="number">4000</span>/images/avatar.jpg)</span><br></pre></td></tr></table></figure></p>
+<h1 id="引用">引用</h1><p>写作的时候需要引用他人的文字，这个时候引用这个格式就很有必要了，在<code>Markdown</code>中，你只需要在你希望引用的文字前面加上<code>&gt;</code>就好了。例如：</p>
+<blockquote>
+<p>床前明月光<br>疑是地上霜<br>举头望明月<br>低头思故乡</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 床前明月光</span><br><span class="line">&gt; 疑是地上霜</span><br><span class="line">&gt; 举头望明月</span><br><span class="line">&gt; 低头思故乡</span><br></pre></td></tr></table></figure>
+<h1 id="粗体和斜体">粗体和斜体</h1><p>用两个<code>*</code>包含一段文本就是粗体的语法，用一个<code>*</code>包含一段文本就是斜体的语法。例如：<br>    <strong>2015</strong> <em>美好开始</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**<span class="number">2015</span>** *美好开始*</span><br></pre></td></tr></table></figure></p>
+<h1 id="表格">表格</h1><p>默认居左,<code>:----:</code>居中,<code>-----:</code>居右。</p>
+<table>
+<thead>
+<tr>
+<th>姓名:</th>
+<th style="text-align:center">性别:</th>
+<th style="text-align:right">年龄:</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>张三</td>
+<td style="text-align:center">男</td>
+<td style="text-align:right">18</td>
+</tr>
+<tr>
+<td>李四</td>
+<td style="text-align:center">男</td>
+<td style="text-align:right">19</td>
+</tr>
+<tr>
+<td>王小妹</td>
+<td style="text-align:center">女</td>
+<td style="text-align:right">20</td>
+</tr>
+</tbody>
+</table>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 姓名:          | 性别:         | 年龄:  |</span><br><span class="line">| ------------- |:-------------:|-----:|</span><br><span class="line">| 张三           | 男            | <span class="number">18</span>    |</span><br><span class="line">| 李四           | 男            | <span class="number">19</span>    |</span><br><span class="line">| 王小妹         | 女            | <span class="number">20</span>    |</span><br></pre></td></tr></table></figure>
+<h1 id="显示链接中带括号的图片">显示链接中带括号的图片</h1><p><img src="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1" alt=""></p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![][<span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>]: http://latex.codecogs.com/gif.latex?\prod%<span class="number">20</span>\(n_&#123;i&#125;\)+<span class="number">1</span></span><br></pre></td></tr></table></figure>
+<h1 id="阅读更多">阅读更多</h1><p>使用代码<code>&lt;!-- more --&gt;</code>即可。</p>
+<h1 id="结语">结语</h1><p>以上几种格式是比较常用的格式，对于写作来说应该基本够用了，如果想了解跟多可以参考<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法说明</a>。<br>强烈建议您现在就立马用 Markdown 写一篇文章吧，体会一下 Markdown 的优雅之处！</p>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p> Markdown的语法已经足够简单，但是现有的<a href="http://wowubuntu.com/markdown/">Markdown语法</a>说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从<a href="https://www.zybuluo.com/mdeditor">作业部落</a>到<a href="http://www.jianshu.com/">简书</a>，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 <code>Markdown</code> 语法。<br>]]>
+    
+    </summary>
+    
+      <category term="Markdown" scheme="http://jiuzhou-romens.github.io.git/tags/Markdown/"/>
+    
+  </entry>
+  
+  <entry>
     <title><![CDATA[Hexo主题Yilia]]></title>
-    <link href="http://jiuzhou-romens.github.io.git/2015/11/23/Hexo%E4%B8%BB%E9%A2%98/"/>
-    <id>http://jiuzhou-romens.github.io.git/2015/11/23/Hexo主题/</id>
-    <published>2015-11-23T08:52:16.000Z</published>
-    <updated>2015-11-23T08:52:16.000Z</updated>
+    <link href="http://jiuzhou-romens.github.io.git/2015/11/24/Hexo%E4%B8%BB%E9%A2%98/"/>
+    <id>http://jiuzhou-romens.github.io.git/2015/11/24/Hexo主题/</id>
+    <published>2015-11-24T01:56:20.000Z</published>
+    <updated>2015-11-24T01:56:19.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/litten/hexo-theme-yilia" target="_blank" rel="external">hexo-theme-yilia</a> 是为 <a href="https://github.com/tommy351/hexo" target="_blank" rel="external">hexo</a> 2.4+制作的主题。<br>响应式设计，风格简约。<br><a id="more"></a><br>终于从octopress迁移到hexo。Yilia是自己设计的主题，分享之，有爱请自取。关于主题：</p>
 <ol>
 <li>我喜欢简约。所以标签云，搜索框都拿掉了</li>
@@ -48,7 +123,7 @@
     
     </summary>
     
-      <category term="hexo" scheme="http://jiuzhou-romens.github.io.git/tags/hexo/"/>
+      <category term="Hexo" scheme="http://jiuzhou-romens.github.io.git/tags/Hexo/"/>
     
       <category term="主题" scheme="http://jiuzhou-romens.github.io.git/tags/%E4%B8%BB%E9%A2%98/"/>
     
