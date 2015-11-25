@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="赵九州的博客">
 <meta property="og:description" content="UILable作为iOS最常用的控件之一，但是有些属性可能很少用到，但并不意味着以后不会用到，谨以此文根据自身使用情况做简单总结，大牛请无视。">
 <meta property="og:image" content="http://www.geovyn.com/images/lable.jpg">
-<meta property="og:updated_time" content="2015-11-25T04:44:28.000Z">
+<meta property="og:updated_time" content="2015-11-25T04:46:31.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UILable你不常用但需要了解的属性">
 <meta name="twitter:description" content="UILable作为iOS最常用的控件之一，但是有些属性可能很少用到，但并不意味着以后不会用到，谨以此文根据自身使用情况做简单总结，大牛请无视。">
@@ -194,7 +194,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/25/UILable/" class="article-date">
-  	<time datetime="2015-11-25T04:44:28.000Z" itemprop="datePublished">Nov 25 2015</time>
+  	<time datetime="2015-11-25T04:46:31.000Z" itemprop="datePublished">Nov 25 2015</time>
 </a>
     </div>
   
@@ -227,18 +227,18 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p>UILable作为iOS最常用的控件之一，但是有些属性可能很少用到，但并不意味着以后不会用到，谨以此文根据自身使用情况做简单总结，大牛请无视。<br><a id="more"></a><br><code>iOS 7.0 之后可用</code><br>// 标题的风格</p>
+        <p>UILable作为iOS最常用的控件之一，但是有些属性可能很少用到，但并不意味着以后不会用到，谨以此文根据自身使用情况做简单总结，大牛请无视。<br><a id="more"></a><br><code>iOS 7.0 之后可用</code></p>
 <blockquote>
-<p>NSString <em>const UIFontTextStyleHeadline<br>// 副标题的风格<br>NSString </em>const UIFontTextStyleSubheadline<br>// 正文的字体<br>NSString <em>const UIFontTextStyleBody<br>// 脚注的字体<br>NSString </em>const UIFontTextStyleFootnote<br>// 标准字幕字体<br>NSString <em>const UIFontTextStyleCaption1<br>// 替换字幕字体<br>NSString </em>const UIFontTextStyleCaption2</p>
+<p>// 标题的风格<br>NSString <em>const UIFontTextStyleHeadline<br>// 副标题的风格<br>NSString </em>const UIFontTextStyleSubheadline<br>// 正文的字体<br>NSString <em>const UIFontTextStyleBody<br>// 脚注的字体<br>NSString </em>const UIFontTextStyleFootnote<br>// 标准字幕字体<br>NSString <em>const UIFontTextStyleCaption1<br>// 替换字幕字体<br>NSString </em>const UIFontTextStyleCaption2</p>
 </blockquote>
 <p><img src="http://www.geovyn.com/images/lable.jpg" alt=""></p>
 <p><code>iOS 9.0 之后可用</code></p>
 <blockquote>
 <p>NSString <em>const UIFontTextStyleTitle1<br>NSString </em>const UIFontTextStyleTitle2<br>NSString *const UIFontTextStyleTitle3<br>使用方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UILabel *styleHead = [[UILabel alloc] initWithFrame:CGRectMake(<span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">100</span>)];</span><br><span class="line">  styleHead.text = @<span class="string">"这是一段测试文字"</span>;</span><br><span class="line">  styleHead.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];</span><br></pre></td></tr></table></figure></p>
 </blockquote>
-<h2 id="多行文本设置">多行文本设置</h2><p>纯代码布局使用最多的就是 <code>NSLineBreakByWordWrapping</code> <code>preferredMaxLayoutWidth</code><br>// Wrap at word boundaries, default        文本边缘处理</p>
+<h2 id="多行文本设置">多行文本设置</h2><p>纯代码布局使用最多的就是 <code>NSLineBreakByWordWrapping</code> <code>preferredMaxLayoutWidth</code> </p>
 <blockquote>
-<p>   NSLineBreakByWordWrapping<br>// Wrap at character boundaries            提前处理不合适的字符<br>  NSLineBreakByCharWrapping<br>// Simply clip                            简单线性处理<br>  NSLineBreakByClipping<br>// Truncate at head of line: “…wxyz”    丢失的开头用省略号表示<br>  NSLineBreakByTruncatingHead<br>// Truncate at tail of line: “abcd…”    丢失的文本在末尾显示省略号<br>  NSLineBreakByTruncatingTail<br>// Truncate middle of line:  “ab…yz”    丢失的文本在中间显示省略号<br>  NSLineBreakByTruncatingMiddle    </p>
+<p>// Wrap at word boundaries, default        文本边缘处理<br>   NSLineBreakByWordWrapping<br>// Wrap at character boundaries            提前处理不合适的字符<br>  NSLineBreakByCharWrapping<br>// Simply clip                            简单线性处理<br>  NSLineBreakByClipping<br>// Truncate at head of line: “…wxyz”    丢失的开头用省略号表示<br>  NSLineBreakByTruncatingHead<br>// Truncate at tail of line: “abcd…”    丢失的文本在末尾显示省略号<br>  NSLineBreakByTruncatingTail<br>// Truncate middle of line:  “ab…yz”    丢失的文本在中间显示省略号<br>  NSLineBreakByTruncatingMiddle    </p>
 </blockquote>
 
       
