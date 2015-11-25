@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-25T01:40:31.000Z</updated>
+  <updated>2015-11-25T04:44:28.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -13,6 +13,39 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[UILable你不常用但需要了解的属性]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2015/11/25/UILable/"/>
+    <id>http://jiuzhou-romens.github.io.git/2015/11/25/UILable/</id>
+    <published>2015-11-25T04:44:28.000Z</published>
+    <updated>2015-11-25T04:44:28.000Z</updated>
+    <content type="html"><![CDATA[<p>UILable作为iOS最常用的控件之一，但是有些属性可能很少用到，但并不意味着以后不会用到，谨以此文根据自身使用情况做简单总结，大牛请无视。<br><a id="more"></a><br><code>iOS 7.0 之后可用</code><br>// 标题的风格</p>
+<blockquote>
+<p>NSString <em>const UIFontTextStyleHeadline<br>// 副标题的风格<br>NSString </em>const UIFontTextStyleSubheadline<br>// 正文的字体<br>NSString <em>const UIFontTextStyleBody<br>// 脚注的字体<br>NSString </em>const UIFontTextStyleFootnote<br>// 标准字幕字体<br>NSString <em>const UIFontTextStyleCaption1<br>// 替换字幕字体<br>NSString </em>const UIFontTextStyleCaption2</p>
+</blockquote>
+<p><img src="http://www.geovyn.com/images/lable.jpg" alt=""></p>
+<p><code>iOS 9.0 之后可用</code></p>
+<blockquote>
+<p>NSString <em>const UIFontTextStyleTitle1<br>NSString </em>const UIFontTextStyleTitle2<br>NSString *const UIFontTextStyleTitle3<br>使用方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UILabel *styleHead = [[UILabel alloc] initWithFrame:CGRectMake(<span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">100</span>)];</span><br><span class="line">  styleHead.text = @<span class="string">"这是一段测试文字"</span>;</span><br><span class="line">  styleHead.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];</span><br></pre></td></tr></table></figure></p>
+</blockquote>
+<h2 id="多行文本设置">多行文本设置</h2><p>纯代码布局使用最多的就是 <code>NSLineBreakByWordWrapping</code> <code>preferredMaxLayoutWidth</code><br>// Wrap at word boundaries, default        文本边缘处理</p>
+<blockquote>
+<p>   NSLineBreakByWordWrapping<br>// Wrap at character boundaries            提前处理不合适的字符<br>  NSLineBreakByCharWrapping<br>// Simply clip                            简单线性处理<br>  NSLineBreakByClipping<br>// Truncate at head of line: “…wxyz”    丢失的开头用省略号表示<br>  NSLineBreakByTruncatingHead<br>// Truncate at tail of line: “abcd…”    丢失的文本在末尾显示省略号<br>  NSLineBreakByTruncatingTail<br>// Truncate middle of line:  “ab…yz”    丢失的文本在中间显示省略号<br>  NSLineBreakByTruncatingMiddle    </p>
+</blockquote>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>UILable作为iOS最常用的控件之一，但是有些属性可能很少用到，但并不意味着以后不会用到，谨以此文根据自身使用情况做简单总结，大牛请无视。<br>]]>
+    
+    </summary>
+    
+      <category term="UILable" scheme="http://jiuzhou-romens.github.io.git/tags/UILable/"/>
+    
+      <category term="iOS" scheme="http://jiuzhou-romens.github.io.git/tags/iOS/"/>
+    
+      <category term="iOS之UI控件" scheme="http://jiuzhou-romens.github.io.git/tags/iOS%E4%B9%8BUI%E6%8E%A7%E4%BB%B6/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[使用SDWebImage加载大量图片造成内存泄露的解决方法]]></title>
