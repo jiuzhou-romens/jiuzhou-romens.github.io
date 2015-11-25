@@ -12,7 +12,7 @@
 <meta property="og:site_name" content="赵九州的博客">
 <meta property="og:description" content="UILable作为iOS最常用的控件之一，所以每个版本的改变都要了解。">
 <meta property="og:image" content="http://www.geovyn.com/images/lable.jpg">
-<meta property="og:updated_time" content="2015-11-25T05:19:08.000Z">
+<meta property="og:updated_time" content="2015-11-25T05:20:39.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="UILable iOS9 改变">
 <meta name="twitter:description" content="UILable作为iOS最常用的控件之一，所以每个版本的改变都要了解。">
@@ -194,7 +194,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/25/UILable/" class="article-date">
-  	<time datetime="2015-11-25T05:19:09.000Z" itemprop="datePublished">Nov 25 2015</time>
+  	<time datetime="2015-11-25T05:20:39.000Z" itemprop="datePublished">Nov 25 2015</time>
 </a>
     </div>
   
@@ -239,9 +239,9 @@
 <p>使用方式：<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">UILabel *styleHead = [[UILabel alloc] initWithFrame:CGRectMake(<span class="number">50</span>, <span class="number">100</span>, <span class="number">200</span>, <span class="number">100</span>)];</span><br><span class="line">  styleHead.text = @<span class="string">"这是一段测试文字"</span>;</span><br><span class="line">  styleHead.font = [UIFont preferredFontForTextStyle:UIFontTextStyleSubheadline];</span><br></pre></td></tr></table></figure></p>
 <h2 id="多行文本设置(iOS9_未改变)">多行文本设置(iOS9 未改变)</h2><p>纯代码布局使用最多的就是 <code>NSLineBreakByWordWrapping</code> <code>preferredMaxLayoutWidth</code> </p>
 <blockquote>
-<p>// Wrap at word boundaries, default        文本边缘处理<br>   NSLineBreakByWordWrapping<br>// Wrap at character boundaries            提前处理不合适的字符<br>  NSLineBreakByCharWrapping<br>// Simply clip                            简单线性处理<br>  NSLineBreakByClipping<br>// Truncate at head of line: “…wxyz”    丢失的开头用省略号表示<br>  NSLineBreakByTruncatingHead<br>// Truncate at tail of line: “abcd…”    丢失的文本在末尾显示省略号<br>  NSLineBreakByTruncatingTail<br>// Truncate middle of line:  “ab…yz”    丢失的文本在中间显示省略号<br>  NSLineBreakByTruncatingMiddle    </p>
-<h2 id="新属性(是否允许文字进行收缩)">新属性(是否允许文字进行收缩)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(nonatomic) BOOL allowsDefaultTighteningForTruncation;</span><br></pre></td></tr></table></figure>
+<p>// Wrap at word boundaries, default        文本边缘处理<br>   NSLineBreakByWordWrapping<br>// Wrap at character boundaries            提前处理不合适的字符<br>  NSLineBreakByCharWrapping<br>// Simply clip                            简单线性处理<br>  NSLineBreakByClipping<br>// Truncate at head of line: “…wxyz”    丢失的开头用省略号表示<br>  NSLineBreakByTruncatingHead<br>// Truncate at tail of line: “abcd…”    丢失的文本在末尾显示省略号<br>  NSLineBreakByTruncatingTail<br>// Truncate middle of line:  “ab…yz”    丢失的文本在中间显示省略号<br>  NSLineBreakByTruncatingMiddle</p>
 </blockquote>
+<h2 id="新属性(是否允许文字进行收缩)">新属性(是否允许文字进行收缩)</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">@property(nonatomic) BOOL allowsDefaultTighteningForTruncation;</span><br></pre></td></tr></table></figure>
 <p>该特性常与 <code>@property(nonatomic) CGFloat minimumScaleFactor;(设置最小收缩比例)</code> 结合使用。</p>
 
       
