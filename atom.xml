@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-25T05:20:39.000Z</updated>
+  <updated>2015-11-25T05:21:51.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[UILable iOS9 改变]]></title>
     <link href="http://jiuzhou-romens.github.io.git/2015/11/25/UILable/"/>
     <id>http://jiuzhou-romens.github.io.git/2015/11/25/UILable/</id>
-    <published>2015-11-25T05:20:39.000Z</published>
-    <updated>2015-11-25T05:20:39.000Z</updated>
+    <published>2015-11-25T05:21:51.000Z</published>
+    <updated>2015-11-25T05:21:51.000Z</updated>
     <content type="html"><![CDATA[<p>UILable作为iOS最常用的控件之一，所以每个版本的改变都要了解。<br><a id="more"></a><br><code>iOS 7.0 之后可用</code></p>
 <blockquote>
 <p>// 标题的风格<br>NSString <em>const UIFontTextStyleHeadline<br>// 副标题的风格<br>NSString </em>const UIFontTextStyleSubheadline<br>// 正文的字体<br>NSString <em>const UIFontTextStyleBody<br>// 脚注的字体<br>NSString </em>const UIFontTextStyleFootnote<br>// 标准字幕字体<br>NSString <em>const UIFontTextStyleCaption1<br>// 替换字幕字体<br>NSString </em>const UIFontTextStyleCaption2</p>
