@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-25T01:38:45.000Z</updated>
+  <updated>2015-11-25T01:40:31.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -18,13 +18,13 @@
     <title><![CDATA[使用SDWebImage加载大量图片造成内存泄露的解决方法]]></title>
     <link href="http://jiuzhou-romens.github.io.git/2015/11/25/SDWebImage%E5%86%85%E5%AD%98%E6%B3%84%E9%9C%B2%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88/"/>
     <id>http://jiuzhou-romens.github.io.git/2015/11/25/SDWebImage内存泄露解决方案/</id>
-    <published>2015-11-25T01:38:45.000Z</published>
-    <updated>2015-11-25T01:38:45.000Z</updated>
+    <published>2015-11-25T01:40:31.000Z</published>
+    <updated>2015-11-25T01:40:31.000Z</updated>
     <content type="html"><![CDATA[<p><a href="https://github.com/rs/SDWebImage" target="_blank" rel="external">SDWebImage</a> 我相信是个<code>iOS</code>码农都用过，在 github 上 11K+ star , 国内外大多数 App 使用它来进行图片加载。最近在做列表展示的时候，下拉新增不断的增加内容，发现内存占用越来越大，导致 memory warning 最终 terminate 。<br>  <a id="more"></a><br> 在SDWebImage的代码中对memory warning 的处理:<br> <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"> - (void)clearMemory &#123;</span><br><span class="line">    [self.memCache removeAllObjects];</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
 <blockquote>
 <p>其中self.memCache是NSCache类型的，虽然SDWebImage本身对内存警告执行了操作，然而并没有什么X用。</p>
 </blockquote>
-<p>借助google查看到问题的具体原因和解决方案<a href="https://github.com/rs/SDWebImage/issues/538" target="_blank" rel="external">issues538</a>。<br>因此在使用SDWebImage加载大量网络图片时，在下拉加载(刷新)中执行下列代码可解决此问题:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[SDImageCache sharedImageCache] <span class="built_in">set</span>Value:nil <span class="keyword">for</span>Key:@<span class="string">"memCache"</span>];</span><br></pre></td></tr></table></figure></p>
+<p>借助google查看到问题的具体原因和解决方案 <a href="https://github.com/rs/SDWebImage/issues/538" target="_blank" rel="external">issues538</a>。<br>因此在使用SDWebImage加载大量网络图片时，在下拉加载(刷新)中执行下列代码可解决此问题:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[[SDImageCache sharedImageCache] <span class="built_in">set</span>Value:nil <span class="keyword">for</span>Key:@<span class="string">"memCache"</span>];</span><br></pre></td></tr></table></figure></p>
 ]]></content>
     <summary type="html">
     <![CDATA[<p><a href="https://github.com/rs/SDWebImage">SDWebImage</a> 我相信是个<code>iOS</code>码农都用过，在 github 上 11K+ star , 国内外大多数 App 使用它来进行图片加载。最近在做列表展示的时候，下拉新增不断的增加内容，发现内存占用越来越大，导致 memory warning 最终 terminate 。<br>]]>
