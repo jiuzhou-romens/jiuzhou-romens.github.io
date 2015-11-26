@@ -3,18 +3,24 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Xcode插件管理 | 赵九州的博客</title>
+  <title>Swift 学习记录 -- 闭包 | 赵九州的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="安装终端输入:1curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh">
+  <meta name="description" content="闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。
+闭包可以在上下文的范围内捕获、存储任何被定义的常量和变量引用。因这些常量和变量的封闭性，而命名为“闭包（Closures）”。Swift能够对所有你所能捕获到的引用进行内存管理。
+函数实际上是一种特殊的闭包:它是一段能之后被调取的代码。闭包中的">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Xcode插件管理">
-<meta property="og:url" content="http://jiuzhou-romens.github.io.git/2015/11/24/Xcode--插件管理/index.html">
+<meta property="og:title" content="Swift 学习记录 -- 闭包">
+<meta property="og:url" content="http://jiuzhou-romens.github.io.git/2015/11/26/Swift 学习记录 -- 闭包/index.html">
 <meta property="og:site_name" content="赵九州的博客">
-<meta property="og:description" content="安装终端输入:1curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh">
-<meta property="og:updated_time" content="2015-11-24T10:30:28.000Z">
+<meta property="og:description" content="闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。
+闭包可以在上下文的范围内捕获、存储任何被定义的常量和变量引用。因这些常量和变量的封闭性，而命名为“闭包（Closures）”。Swift能够对所有你所能捕获到的引用进行内存管理。
+函数实际上是一种特殊的闭包:它是一段能之后被调取的代码。闭包中的">
+<meta property="og:updated_time" content="2015-11-26T09:35:53.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Xcode插件管理">
-<meta name="twitter:description" content="安装终端输入:1curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh">
+<meta name="twitter:title" content="Swift 学习记录 -- 闭包">
+<meta name="twitter:description" content="闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。
+闭包可以在上下文的范围内捕获、存储任何被定义的常量和变量引用。因这些常量和变量的封闭性，而命名为“闭包（Closures）”。Swift能够对所有你所能捕获到的引用进行内存管理。
+函数实际上是一种特殊的闭包:它是一段能之后被调取的代码。闭包中的">
   
     <link rel="alternative" href="/atom.xml" title="赵九州的博客" type="application/atom+xml">
   
@@ -189,11 +195,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Xcode--插件管理" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-Swift 学习记录 -- 闭包" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/24/Xcode--插件管理/" class="article-date">
-  	<time datetime="2015-11-24T10:30:28.000Z" itemprop="datePublished">Nov 24 2015</time>
+      <a href="/2015/11/26/Swift 学习记录 -- 闭包/" class="article-date">
+  	<time datetime="2015-11-26T09:35:53.000Z" itemprop="datePublished">Nov 26 2015</time>
 </a>
     </div>
   
@@ -206,7 +212,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Xcode插件管理
+      Swift 学习记录 -- 闭包
     </h1>
   
 
@@ -215,10 +221,14 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Alcatraz/">Alcatraz</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Swift/">Swift</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/基础/">基础</a></li></ul>
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/学习记录/">学习记录</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -226,11 +236,26 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <h1 id="安装">安装</h1><p>终端输入:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">curl -fsSL https://raw.githubusercontent.com/supermarin/Alcatraz/master/Scripts/install.sh | sh</span><br></pre></td></tr></table></figure></p>
-<a id="more"></a>
-<h1 id="卸载">卸载</h1><p>删除插件:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/Library/Application\ Support/Developer/Shared/Xcode/Plug-ins/Alcatraz.xcplugin</span><br></pre></td></tr></table></figure></p>
-<p>删除缓存数据:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">rm -rf ~/Library/Application\ Support/Alcatraz</span><br></pre></td></tr></table></figure></p>
-<p><a href="http://www.cocoachina.com/industry/20130918/7022.html" target="_blank" rel="external">那些不能错过的Xcode插件</a><br><a href="http://www.bubuko.com/infodetail-963903.html" target="_blank" rel="external">插件无法运行</a></p>
+        <p>闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。</p>
+<p>闭包可以在上下文的范围内捕获、存储任何被定义的常量和变量引用。因这些常量和变量的封闭性，而命名为“闭包（Closures）”。Swift能够对所有你所能捕获到的引用进行内存管理。</p>
+<p>函数实际上是一种特殊的闭包:它是一段能之后被调取的代码。闭包中的代码能访问闭包所建作用域中能得到的变量和函数,即使闭包是在一个不同的作用域被执行的（函数嵌套）。你可以使用{ }来创建一个匿名闭包。使用in将参数和返回值类型声明与闭包函数体进行分离。<br><a id="more"></a></p>
+<h1 id="闭包格式">闭包格式</h1><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    (参数:类型) -&gt;返回类型  <span class="keyword">in</span></span><br><span class="line">    </span><br><span class="line">    执行方法</span><br><span class="line">    </span><br><span class="line">    <span class="built_in">return</span> 返回类型</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+<h2 id="示例代码">示例代码</h2><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">var numbers = [<span class="number">20</span>, <span class="number">19</span>, <span class="number">7</span>, <span class="number">12</span>]</span><br><span class="line">numbers.map(&#123;</span><br><span class="line">    (number: Int) -&gt; Int <span class="keyword">in</span></span><br><span class="line">    <span class="built_in">let</span> result = <span class="number">3</span> * number</span><br><span class="line">    <span class="built_in">return</span> result</span><br><span class="line">    &#125;)</span><br></pre></td></tr></table></figure>
+<h1 id="说明">说明</h1><blockquote>
+<ol>
+<li>闭包主要指向函数类型</li>
+<li>闭包的参数必须和函数类型的参数和返回值一致</li>
+<li>闭包简写方法</li>
+</ol>
+<ul>
+<li>第一种简写 ：省略 参数类型和括号 </li>
+<li>第二种简写 : 省略 参数类型和括号，return关键字</li>
+<li>第三种简写 ： 参数名称缩写 (用$0代表第一个参数，$1代表第二个参数)</li>
+</ul>
+</blockquote>
+<p>如果一个闭包的类型已知,比如作为一个回调函数,你可以忽略参数的类型和返回值。单个语句闭包会把它语句的值当做结果返回。</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> mappedNumbers = numbers.map(&#123; number <span class="keyword">in</span> <span class="number">3</span> * number &#125;)</span><br><span class="line"><span class="built_in">print</span>(mappedNumbers)</span><br></pre></td></tr></table></figure>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> sortedNumbers = numbers.sort &#123; <span class="variable">$0</span> &gt; <span class="variable">$1</span> &#125;</span><br><span class="line"><span class="built_in">print</span>(sortedNumbers);</span><br></pre></td></tr></table></figure>
 
       
     </div>
@@ -240,18 +265,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/25/SDWebImage内存泄露解决方案/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          使用SDWebImage加载大量图片造成内存泄露的解决方法
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/24/Markdown/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Markdown学习指南</div>
+    <a href="/2015/11/26/UILable/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">UILable iOS9 改变</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -280,7 +296,7 @@
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Xcode--插件管理" data-title="Xcode插件管理" data-url="http://jiuzhou-romens.github.io.git/2015/11/24/Xcode--插件管理/"></div>
+    <div class="ds-thread" data-thread-key="post-Swift 学习记录 -- 闭包" data-title="Swift 学习记录 -- 闭包" data-url="http://jiuzhou-romens.github.io.git/2015/11/26/Swift 学习记录 -- 闭包/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
