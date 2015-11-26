@@ -15,7 +15,7 @@
 <meta property="og:description" content="闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。
 闭包可以在上下文的范围内捕获、存储任何被定义的常量和变量引用。因这些常量和变量的封闭性，而命名为“闭包（Closures）”。Swift能够对所有你所能捕获到的引用进行内存管理。
 函数实际上是一种特殊的闭包:它是一段能之后被调取的代码。闭包中的">
-<meta property="og:updated_time" content="2015-11-26T09:35:53.000Z">
+<meta property="og:updated_time" content="2015-11-26T09:38:33.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swift 学习记录 -- 闭包">
 <meta name="twitter:description" content="闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。
@@ -199,7 +199,7 @@
   
     <div class="article-meta">
       <a href="/2015/11/26/Swift 学习记录 -- 闭包/" class="article-date">
-  	<time datetime="2015-11-26T09:35:53.000Z" itemprop="datePublished">Nov 26 2015</time>
+  	<time datetime="2015-11-26T09:38:33.000Z" itemprop="datePublished">Nov 26 2015</time>
 </a>
     </div>
   
@@ -255,6 +255,7 @@
 </blockquote>
 <p>如果一个闭包的类型已知,比如作为一个回调函数,你可以忽略参数的类型和返回值。单个语句闭包会把它语句的值当做结果返回。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> mappedNumbers = numbers.map(&#123; number <span class="keyword">in</span> <span class="number">3</span> * number &#125;)</span><br><span class="line"><span class="built_in">print</span>(mappedNumbers)</span><br></pre></td></tr></table></figure>
+<p>你可以通过参数位置而不是参数名字来引用参数——这个方法在非常短的闭包中非常有用。当一个闭包作为最后<br>一个参数传给一个函数的时候,它可以直接跟在括号后面。当一个闭包是传给函数的唯一参数,你可以完全忽略<br>括号。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> sortedNumbers = numbers.sort &#123; <span class="variable">$0</span> &gt; <span class="variable">$1</span> &#125;</span><br><span class="line"><span class="built_in">print</span>(sortedNumbers);</span><br></pre></td></tr></table></figure>
 
       

@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-26T09:35:53.000Z</updated>
+  <updated>2015-11-26T09:38:33.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Swift 学习记录 -- 闭包]]></title>
     <link href="http://jiuzhou-romens.github.io.git/2015/11/26/Swift%20%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95%20--%20%E9%97%AD%E5%8C%85/"/>
     <id>http://jiuzhou-romens.github.io.git/2015/11/26/Swift 学习记录 -- 闭包/</id>
-    <published>2015-11-26T09:35:53.000Z</published>
-    <updated>2015-11-26T09:35:53.000Z</updated>
+    <published>2015-11-26T09:38:33.000Z</published>
+    <updated>2015-11-26T09:38:33.000Z</updated>
     <content type="html"><![CDATA[<p>闭包（Closures）是独立的函数代码块，能在代码中传递及使用。Swift中的闭包与C和Objective-C中的代码块及其它编程语言中的匿名函数相似。</p>
 <p>闭包可以在上下文的范围内捕获、存储任何被定义的常量和变量引用。因这些常量和变量的封闭性，而命名为“闭包（Closures）”。Swift能够对所有你所能捕获到的引用进行内存管理。</p>
 <p>函数实际上是一种特殊的闭包:它是一段能之后被调取的代码。闭包中的代码能访问闭包所建作用域中能得到的变量和函数,即使闭包是在一个不同的作用域被执行的（函数嵌套）。你可以使用{ }来创建一个匿名闭包。使用in将参数和返回值类型声明与闭包函数体进行分离。<br><a id="more"></a></p>
@@ -39,6 +39,7 @@
 </blockquote>
 <p>如果一个闭包的类型已知,比如作为一个回调函数,你可以忽略参数的类型和返回值。单个语句闭包会把它语句的值当做结果返回。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> mappedNumbers = numbers.map(&#123; number <span class="keyword">in</span> <span class="number">3</span> * number &#125;)</span><br><span class="line"><span class="built_in">print</span>(mappedNumbers)</span><br></pre></td></tr></table></figure>
+<p>你可以通过参数位置而不是参数名字来引用参数——这个方法在非常短的闭包中非常有用。当一个闭包作为最后<br>一个参数传给一个函数的时候,它可以直接跟在括号后面。当一个闭包是传给函数的唯一参数,你可以完全忽略<br>括号。</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="built_in">let</span> sortedNumbers = numbers.sort &#123; <span class="variable">$0</span> &gt; <span class="variable">$1</span> &#125;</span><br><span class="line"><span class="built_in">print</span>(sortedNumbers);</span><br></pre></td></tr></table></figure>
 ]]></content>
     <summary type="html">
