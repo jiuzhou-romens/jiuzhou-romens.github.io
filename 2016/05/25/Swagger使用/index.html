@@ -17,7 +17,7 @@
 
 1. 关于SwaggerSwagger是一个Restful定义描述语义。围绕Swagger, OpenSource世界提供了一组工具,覆盖了Restful接口定义、接口代码生成等。并可以直接导入Postman或者以mock方式模拟接口调用。
 并且,还可以在接口定义中规范参数的格式、有效取值">
-<meta property="og:updated_time" content="2016-05-25T08:43:02.000Z">
+<meta property="og:updated_time" content="2016-05-25T08:56:46.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Swagger 使用">
 <meta name="twitter:description" content="Restful接口规范描述Restful接口设计、开发、测试(分别模拟客户端和服务器端)、以及联调的方式。
@@ -202,7 +202,7 @@
   
     <div class="article-meta">
       <a href="/2016/05/25/Swagger使用/" class="article-date">
-  	<time datetime="2016-05-25T08:43:02.000Z" itemprop="datePublished">May 25 2016</time>
+  	<time datetime="2016-05-25T08:56:46.000Z" itemprop="datePublished">May 25 2016</time>
 </a>
     </div>
   
@@ -247,21 +247,7 @@
 <li>安装swagger工具<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g swagger-cli&#10;$ npm install -g swagger-diff</span><br></pre></td></tr></table></figure>
 </li>
 </ul>
-<h5 id="2-_API定义文件">2. API定义文件</h5><p>所有的接口定义都已.yaml文件表述, 放置在RestAPI/yaml路径下。</p>
-<table>
-<thead>
-<tr>
-<th>文件</th>
-<th>定义</th>
-<th>场景</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td></td>
-</tr>
-</tbody>
-</table>
+<h5 id="2-_API定义文件">2. API定义文件</h5><p>所有的接口定义都已.yaml文件表述, 放置在RestAPI/yaml路径下。<br>  文件 |  定义   |  场景</p>
 <h5 id="3-_如何检查yaml的语法">3. 如何检查yaml的语法</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ swagger validate Edi.yaml</span><br></pre></td></tr></table></figure>
 <h5 id="4-_yaml自动生成markdown文档">4. yaml自动生成markdown文档</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd doc/RestAPIs/&#10;$ ../../bin/swagger2markup&#10;$ git commit -m &#34;Updated yaml&#38;md files&#34;&#10;$ git push</span><br></pre></td></tr></table></figure>
 <p>将会在<a href="RestAPIs/">/doc/RestAPIs</a>下, 按照yaml定义生成markdown文档, 并git提交到repository中。</p>
