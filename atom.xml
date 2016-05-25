@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2015-11-26T09:38:33.000Z</updated>
+  <updated>2016-05-25T08:43:02.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -13,6 +13,77 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Swagger 使用]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2016/05/25/Swagger%E4%BD%BF%E7%94%A8/"/>
+    <id>http://jiuzhou-romens.github.io.git/2016/05/25/Swagger使用/</id>
+    <published>2016-05-25T08:43:02.000Z</published>
+    <updated>2016-05-25T08:43:02.000Z</updated>
+    <content type="html"><![CDATA[<h4 id="Restful接口规范">Restful接口规范</h4><p>描述Restful接口设计、开发、测试(分别模拟客户端和服务器端)、以及联调的方式。</p>
+<hr>
+<h5 id="1-_关于Swagger">1. 关于<a href="http://www.swagger.io" target="_blank" rel="external">Swagger</a></h5><p><a href="http://www.swagger.io" target="_blank" rel="external">Swagger</a>是一个Restful定义描述语义。围绕Swagger, OpenSource世界提供了一组工具,覆盖了Restful接口定义、接口代码生成等。并可以直接导入<a href="http://www.getpostman.com/" target="_blank" rel="external">Postman</a>或者以<a href="#8-mock模式模拟接口">mock</a>方式模拟接口调用。</p>
+<p>并且,还可以在接口定义中规范参数的格式、有效取值范围等合法性检查。<br><a id="more"></a></p>
+<ul>
+<li>安装swagger工具<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ npm install -g swagger-cli&#10;$ npm install -g swagger-diff</span><br></pre></td></tr></table></figure>
+</li>
+</ul>
+<h5 id="2-_API定义文件">2. API定义文件</h5><p>所有的接口定义都已.yaml文件表述, 放置在RestAPI/yaml路径下。</p>
+<table>
+<thead>
+<tr>
+<th>文件</th>
+<th>定义</th>
+<th>场景</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td></td>
+</tr>
+</tbody>
+</table>
+<h5 id="3-_如何检查yaml的语法">3. 如何检查yaml的语法</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ swagger validate Edi.yaml</span><br></pre></td></tr></table></figure>
+<h5 id="4-_yaml自动生成markdown文档">4. yaml自动生成markdown文档</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd doc/RestAPIs/&#10;$ ../../bin/swagger2markup&#10;$ git commit -m &#34;Updated yaml&#38;md files&#34;&#10;$ git push</span><br></pre></td></tr></table></figure>
+<p>将会在<a href="RestAPIs/">/doc/RestAPIs</a>下, 按照yaml定义生成markdown文档, 并git提交到repository中。</p>
+<h5 id="5-_生成Server端代码">5. 生成Server端代码</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar bin/swagger-codegen-cli.jar generate -l nodejs-server -i doc/RestAPIs/yaml/&#60;file.yaml&#62; -o skeleton/nodejs</span><br></pre></td></tr></table></figure>
+<p>node.js代码生成在<a href="../skeleton/nodejs">skeleton/nodejs</a>路径下。然后通过代码合并工具将接口上的新变化合并到<a href="../../scc-src">scc-src</a>的项目中。</p>
+<h5 id="6-_生成客户端javascript代码">6. 生成客户端javascript代码</h5><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar bin/swagger-codegen-cli.jar generate -l javascript -i doc/RestAPIs/yaml/&#60;file.yaml&#62; -o skeleton/javascript</span><br></pre></td></tr></table></figure>
+<p>客户端javascript代码会生成在<a href="../skeleton/javascript">skeleton/javascript</a>路径下,然后使用代码合并工具将接口上的新变化合并到<a href="../../scc-react/">scc-react</a>项目中。</p>
+<h5 id="7-_生成android客户端代码">7. 生成android客户端代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar bin/swagger-codegen-cli.jar generate -l java -c bin/android_config.json -i doc/RestAPIs/yaml/&#60;file.yaml&#62; -o skeleton/android</span><br></pre></td></tr></table></figure>
+<p>Android客户端java代码生成在<a href="../skeleton/android">skeleton/android</a>路径下, 然后使用代码合并工具将接口上的新变化合并到<a href="../../scc-mobile">scc-mobile</a>;</p>
+<h5 id="8-_生成ios客户端代码">8. 生成ios客户端代码</h5><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ java -jar bin/swagger-codegen-cli.jar generate -l objc -i doc/RestAPIs/yaml/&#60;file.yaml&#62; -o skeleton/objc</span><br></pre></td></tr></table></figure>
+<p>iOS客户端objective-c代码生成在<a href="../skeleton/objc">skeleton/objc</a>路径下, 然后使用代码合并工具将接口上的新变化合并到<a href="../../scc-mobile">scc-mobile</a>;</p>
+<h5 id="8-_mock模式模拟接口">8. mock模式模拟接口</h5><p>mock模式用来模拟swagger中定义的接口。<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ cd skeleton/nodejs/&#10;$ npm install&#10;$ node .</span><br></pre></td></tr></table></figure></p>
+<p>在浏览器中打开<a href="http://127.0.0.1:8080/docs" target="_blank" rel="external">http://127.0.0.1:8080/docs</a></p>
+<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">$ swagger</span><br></pre></td></tr></table></figure>
+<h5 id="9-_导入Postman测试">9. 导入Postman测试</h5><p>可以将yaml文件直接import到postman中, 在postman中发起对服务器端的测试。</p>
+<h2 id="参考资料:">参考资料:</h2><ul>
+<li><a href="https://engineering.gosquared.com/building-better-api-docs" target="_blank" rel="external">ReaCall: React Practise with Swagger</a></li>
+<li><a href="https://engineering.gosquared.com/building-better-api-docs" target="_blank" rel="external">Building Better API Docs with React And Swagger</a></li>
+<li><a href="http://www.swagger.io" target="_blank" rel="external">Swagger Official Website</a></li>
+<li><a href="https://github.com/Swagger2Markup/swagger2markup" target="_blank" rel="external">swagger2markup</a></li>
+<li><a href="https://github.com/krakenjs/swaggerize-express" target="_blank" rel="external">swaggerize-express</a></li>
+<li><a href="http://stackoverflow.com/questions/34655229/import-swagger-into-existing-project-in-android-studio" target="_blank" rel="external">Android使用swagger</a></li>
+<li><a href="https://github.com/swagger-api/swagger-codegen/wiki/FAQ#how-can-i-generate-an-android-sdk" target="_blank" rel="external">使用swagger-codegen生成Android客户端</a></li>
+<li><a href="http://www.rnavagamuwa.com/open-source/generate-client-side-code-using-swagger-codegen/" target="_blank" rel="external">用swagger生成客户端代码</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h4 id="Restful接口规范">Restful接口规范</h4><p>描述Restful接口设计、开发、测试(分别模拟客户端和服务器端)、以及联调的方式。</p>
+<hr>
+<h5 id="1-_关于Swagger">1. 关于<a href="http://www.swagger.io">Swagger</a></h5><p><a href="http://www.swagger.io">Swagger</a>是一个Restful定义描述语义。围绕Swagger, OpenSource世界提供了一组工具,覆盖了Restful接口定义、接口代码生成等。并可以直接导入<a href="http://www.getpostman.com/">Postman</a>或者以<a href="#8-mock模式模拟接口">mock</a>方式模拟接口调用。</p>
+<p>并且,还可以在接口定义中规范参数的格式、有效取值范围等合法性检查。<br>]]>
+    
+    </summary>
+    
+      <category term="Restful" scheme="http://jiuzhou-romens.github.io.git/tags/Restful/"/>
+    
+      <category term="工具" scheme="http://jiuzhou-romens.github.io.git/tags/%E5%B7%A5%E5%85%B7/"/>
+    
+      <category term="技术" scheme="http://jiuzhou-romens.github.io.git/categories/%E6%8A%80%E6%9C%AF/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Swift 学习记录 -- 闭包]]></title>
