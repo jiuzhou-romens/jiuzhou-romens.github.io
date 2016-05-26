@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2016-05-26T02:38:30.000Z</updated>
+  <updated>2016-05-26T02:40:18.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -18,8 +18,8 @@
     <title><![CDATA[Android 开发学习]]></title>
     <link href="http://jiuzhou-romens.github.io.git/2016/05/26/Android%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/"/>
     <id>http://jiuzhou-romens.github.io.git/2016/05/26/Android开发学习/</id>
-    <published>2016-05-26T02:38:30.000Z</published>
-    <updated>2016-05-26T02:38:30.000Z</updated>
+    <published>2016-05-26T02:40:18.000Z</published>
+    <updated>2016-05-26T02:40:18.000Z</updated>
     <content type="html"><![CDATA[<p>####1.环境部署<br>    工欲善其事必先利其器，要做Android开发，肯定离不开开发环境的搭建</p>
 <p>#####Android开发环境搭建</p>
 <p>######Android 环境要求</p>
@@ -38,7 +38,7 @@
 <li>(可选的)Java开发者使用的Eclipse IDE</li>
 <li>(可选的)Android开发工具(ADT)Eclipse插件</li>
 </ul>
-<p>最后两个组件是可选的，如果是在 Windows 机器上工作，这些组件将方便于开发基于 Java 的应用程序。因此，让我们来看看如何来设置所需的环境。</p>
+<p>最后两个组件是可选的，如果是在 Windows 机器上工作，这些组件将方便于开发基于 Java 的应用程序。因此，让我们来看看如何来设置所需的环境。<br><a id="more"></a></p>
 <p>######安装 Java 开发工具包(JDK)</p>
 <p>你可以从 Oracle 的 Java 网站：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">JDKJava SE</a>下载下载最新版本的 Java 。在下载的文件中找到安装JDK的说明文档，按照给定的说明来安装和配置设置。最后设置 PATH 和 JAVA_HOME 环境变量来引用包含 javac 和 java的目录，通常分别为 java_install_dir/bin 和 java_install_dir。</p>
 <p>如果运行的是 Windows，把 JDK 安装在 C:\jdk1.6.0_15，在 C:\autoexec.bat 文件添加以下内容：</p>
@@ -80,7 +80,23 @@
     <![CDATA[<p>####1.环境部署<br>    工欲善其事必先利其器，要做Android开发，肯定离不开开发环境的搭建</p>
 <p>#####Android开发环境搭建</p>
 <p>######Android 环境要求</p>
-<p>首先，你可以在以下的操作系统开始 Android]]>
+<p>首先，你可以在以下的操作系统开始 Android 应用程序开发：</p>
+<ul>
+<li>Microsoft Windows XP 或更高版本</li>
+<li>带有英特尔芯片的 Mac OS X10.5.8或更高版本。</li>
+<li>包括 GNU C 库2.7或更高版本的 Linux 系统。</li>
+</ul>
+<p>第二，开发 Android 应用程序所需的所有工具都是免费的，可以从网上下载。以下是开始开发 Android 应用程序需要用到的软件列表。</p>
+<ul>
+<li>Java JDK5 或 以后版本</li>
+<li>Android SDK</li>
+<li>Java运行时环境（JRE）</li>
+<li>Android Studio</li>
+<li>(可选的)Java开发者使用的Eclipse IDE</li>
+<li>(可选的)Android开发工具(ADT)Eclipse插件</li>
+</ul>
+<p>最后两个组件是可选的，如果是在 Windows 机器上工作，这些组件将方便于开发基于 Java 的应用程序。因此，让我们来看看如何来设置所需的环境。<br>]]>
+    
     </summary>
     
       <category term="Android" scheme="http://jiuzhou-romens.github.io.git/tags/Android/"/>
