@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2016-05-26T02:27:09.000Z</updated>
+  <updated>2016-05-26T02:38:30.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -13,6 +13,297 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Android 开发学习]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2016/05/26/Android%E5%BC%80%E5%8F%91%E5%AD%A6%E4%B9%A0/"/>
+    <id>http://jiuzhou-romens.github.io.git/2016/05/26/Android开发学习/</id>
+    <published>2016-05-26T02:38:30.000Z</published>
+    <updated>2016-05-26T02:38:30.000Z</updated>
+    <content type="html"><![CDATA[<p>####1.环境部署<br>    工欲善其事必先利其器，要做Android开发，肯定离不开开发环境的搭建</p>
+<p>#####Android开发环境搭建</p>
+<p>######Android 环境要求</p>
+<p>首先，你可以在以下的操作系统开始 Android 应用程序开发：</p>
+<ul>
+<li>Microsoft Windows XP 或更高版本</li>
+<li>带有英特尔芯片的 Mac OS X10.5.8或更高版本。</li>
+<li>包括 GNU C 库2.7或更高版本的 Linux 系统。</li>
+</ul>
+<p>第二，开发 Android 应用程序所需的所有工具都是免费的，可以从网上下载。以下是开始开发 Android 应用程序需要用到的软件列表。</p>
+<ul>
+<li>Java JDK5 或 以后版本</li>
+<li>Android SDK</li>
+<li>Java运行时环境（JRE）</li>
+<li>Android Studio</li>
+<li>(可选的)Java开发者使用的Eclipse IDE</li>
+<li>(可选的)Android开发工具(ADT)Eclipse插件</li>
+</ul>
+<p>最后两个组件是可选的，如果是在 Windows 机器上工作，这些组件将方便于开发基于 Java 的应用程序。因此，让我们来看看如何来设置所需的环境。</p>
+<p>######安装 Java 开发工具包(JDK)</p>
+<p>你可以从 Oracle 的 Java 网站：<a href="http://www.oracle.com/technetwork/java/javase/downloads/index.html" target="_blank" rel="external">JDKJava SE</a>下载下载最新版本的 Java 。在下载的文件中找到安装JDK的说明文档，按照给定的说明来安装和配置设置。最后设置 PATH 和 JAVA_HOME 环境变量来引用包含 javac 和 java的目录，通常分别为 java_install_dir/bin 和 java_install_dir。</p>
+<p>如果运行的是 Windows，把 JDK 安装在 C:\jdk1.6.0_15，在 C:\autoexec.bat 文件添加以下内容：</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">set PATH=C:\jdk1.6.0_15\bin;%PATH%&#10;set JAVA_HOME=C:\jdk1.6.0_15</span><br></pre></td></tr></table></figure>
+<p>你也可以右键单击”我的电脑”，选择”属性”=》”高级”=》”环境变量”，然后通过按下”确定”按钮来更新 PATH 值。</p>
+<p>在 Linux 上，如果 SDK 安装在 /usr/local/jdk1.6.0_15 下，并且使用的是 C shell，把下面的代码到写入 .cshrc 文件。</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">setenv PATH /usr/local/jdk1.6.0_15/bin:$PATH&#10;setenv JAVA_HOME /usr/local/jdk1.6.0_15</span><br></pre></td></tr></table></figure>
+<p>如果你使用集成开发环境 Eclipse，那么它自动知道 Java 已安装在哪里。</p>
+<p>有许多复杂而精巧的技术来开发 Android 应用程序。目前主要使用且相似的技术主要是以下两种：</p>
+<ul>
+<li>Android Studio</li>
+<li>Eclipse ADT  谷歌官方已放弃更新,不推荐</li>
+</ul>
+<p>以下附上AndroidStudio的安装教程</p>
+<ul>
+<li><a href="http://www.jianshu.com/p/fc03942548cc" target="_blank" rel="external">Windows</a></li>
+<li><a href="http://blog.csdn.net/shawnkong/article/details/13510131" target="_blank" rel="external">Linux</a></li>
+<li><a href="http://hao.jser.com/archive/5392/" target="_blank" rel="external">Mac</a></li>
+</ul>
+<p>####2.<a href="http://www.runoob.com/w3cnote/android-tutorial-contents.html" target="_blank" rel="external">Android基础</a></p>
+<p>####3.Android开发进阶</p>
+<ul>
+<li><a href="">Android Camera</a></li>
+<li><a href="">Android 多媒体</a></li>
+<li><a href="">自定义控件</a></li>
+<li><a href="">进程通信 aidl</a></li>
+<li><a href="">第三方集成</a></li>
+<li><a href="">设计模式</a></li>
+<li><a href="">框架架构</a></li>
+</ul>
+<p>####4.资源</p>
+<ul>
+<li><a href="https://github.com/Trinea/android-open-project#%E4%B8%80listview" target="_blank" rel="external">开源库</a></li>
+<li><a href="http://www.apkbus.com/forum-417-1.html" target="_blank" rel="external">精品资源</a></li>
+<li><a href="http://pan.baidu.com/s/1gdYFJPL" target="_blank" rel="external">Android基础学习视频 密码bybt</a></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<p>####1.环境部署<br>    工欲善其事必先利其器，要做Android开发，肯定离不开开发环境的搭建</p>
+<p>#####Android开发环境搭建</p>
+<p>######Android 环境要求</p>
+<p>首先，你可以在以下的操作系统开始 Android]]>
+    </summary>
+    
+      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/tags/Android/"/>
+    
+      <category term="学习记录" scheme="http://jiuzhou-romens.github.io.git/tags/%E5%AD%A6%E4%B9%A0%E8%AE%B0%E5%BD%95/"/>
+    
+      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/categories/Android/"/>
+    
+  </entry>
+  
+  <entry>
+    <title><![CDATA[Andriod 开发规范]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2016/05/26/Android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"/>
+    <id>http://jiuzhou-romens.github.io.git/2016/05/26/Android开发规范/</id>
+    <published>2016-05-26T02:33:17.000Z</published>
+    <updated>2016-05-26T02:33:17.000Z</updated>
+    <content type="html"><![CDATA[<blockquote>
+<p>“The only way to make the deadline - the only way to go fast - is to keep the code as clean as possible at all times.” –Robert C. Martin</p>
+</blockquote>
+<h2 id="一、书写规范">一、书写规范</h2><h4 id="1-编码">1.编码</h4><p>编码方式统一用UTF-8. Android Studio默认已是UTF-8。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_1.png" alt="1"><br><a id="more"></a></p>
+<h4 id="2-缩进">2.缩进</h4><p>缩进统一为4个空格，将Tab size设置为4则可以保证tab键按4个空格缩进。另外，不要勾选上Use tab character，可以保证切换到不同tab长度的环境时还能继续保持统一的4个空格的缩进样式。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_2.png" alt="2"></p>
+<h4 id="3-括号">3.括号</h4><p>花括号不要单独一行，和它前面的代码同一行。而且，花括号与前面的代码之间用一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123; <span class="comment">// Good</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span><br><span class="line"></span>&#123; <span class="comment">// Bad</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123; <span class="comment">// Bad</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<h4 id="4-空格">4.空格</h4><p>if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Good</span></span><br><span class="line"><span class="keyword">if</span> (booleanVariable) &#123;</span><br><span class="line">    <span class="comment">// TODO while booleanVariable is true</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// TODO else</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Bad</span></span><br><span class="line"><span class="keyword">if</span>(booleanVariable) &#123;</span><br><span class="line">    <span class="comment">// TODO while booleanVariable is true</span></span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// TODO else</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>运算符两边各用一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> result = a + b; <span class="comment">//Good, = 和 + 两边各用一个空格隔开</span></span><br><span class="line"><span class="keyword">int</span> result=a+b; <span class="comment">//Bad,=和+两边没用空格隔开</span></span><br></pre></td></tr></table></figure></p>
+<p>方法的每个参数之间用一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(String param1, String param2)</span></span>; <span class="comment">// Good，param1后面的逗号与String之间隔了一个空格</span></span><br><span class="line">method(param1, param2); <span class="comment">// Good，方法调用时，param1后面的逗号与param2之间隔了一个空格</span></span><br><span class="line">method(param1,param2); <span class="comment">// Bad，没有用一个空格隔开</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="5-空行">5.空行</h4><p>将逻辑相关的代码段用空行隔开，以提高可读性。空行也只空一行，不要空多行。在以下情况需用一个空行：</p>
+<ul>
+<li>两个方法之间</li>
+<li>方法内的两个逻辑段之间</li>
+<li><del>方法内的局部变量和方法的第一条逻辑语句之间</del></li>
+<li>常量和变量之间</li>
+</ul>
+<h4 id="6-换行">6.换行</h4><p>当一个表达式无法容纳在一行内时，可换行显示，另起的新行用8个空格缩进。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">someMethod(longExpression1, longExpression2, longExpression3,</span><br><span class="line">        longExpression4, longExpression5);</span><br></pre></td></tr></table></figure></p>
+<h4 id="7-声明">7.声明</h4><p>一行声明一个变量，不要一行声明多个变量，这样有利于写注释。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String param1; <span class="comment">// 参数1</span></span><br><span class="line"><span class="keyword">private</span> String param2; <span class="comment">// 参数2</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="8-行宽">8.行宽</h4><p>行宽设置为100，设置格式化时自动断行到行宽位置。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_3.jpeg" alt="3"><br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_4.jpeg" alt="4"></p>
+<h4 id="9-格式化">9.格式化</h4><p>使用快捷键进行代码自动格式化。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Windows：CTRL+ALT+L</span><br><span class="line">Mac：OPTION+COMMAND+L</span><br></pre></td></tr></table></figure></p>
+<h4 id="10-方法行数">10.方法行数</h4><p>一个方法最多不要超过40行代码。</p>
+<h4 id="11-常量">11.常量</h4><p>范围型的常量用枚举类定义，而不要直接用整型或字符，这样可以减少范围值的有效性检查。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用枚举类定义，Good</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CouponType &#123;</span><br><span class="line">    <span class="comment">// 现金券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"1"</span>)</span><br><span class="line">    CASH,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抵用券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"2"</span>)</span><br><span class="line">    DEBIT,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 折扣券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"3"</span>)</span><br><span class="line">    DISCOUNT</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用整型定义，Bad</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_CASH = <span class="number">1</span>; <span class="comment">// 现金券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DEBIT = <span class="number">2</span>; <span class="comment">// 抵扣券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DISCOUNT = <span class="number">3</span>; <span class="comment">// 折扣券</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="12-大小单位">12.大小单位</h4><p>文字大小的单位统一用sp，元素大小的单位统一用dp。</p>
+<h4 id="13-String值定义">13.String值定义</h4><p>应用中的字符串统一在strings.xml中定义，然后在代码和布局文件中引用。</p>
+<h4 id="14-颜色值定义">14.颜色值定义</h4><p>颜色值统一在colors.xml中定义，然后在代码和布局文件中引用。另外，不要在代码和布局文件中引用系统的颜色，除了透明，因为一旦升级版本，可能会改变。</p>
+<h2 id="命名规范">命名规范</h2><h4 id="1-包">1.包</h4><p>域名反写+项目名称+模块名称，全部单词用小写字母。<br>例如，Grab项目的app模块包名如下：<br>cn.romens.grab.app</p>
+<h4 id="2-类和接口">2.类和接口</h4><p>使用大驼峰规则，用名词或名词词组命名，每个单词的首字母大写。<br>以下为几种常用类的命名：</p>
+<ul>
+<li>activity类，命名以Activity为后缀，如：LoginActivity</li>
+<li>fragment类，命名以Fragment为后缀，如：ShareDialogFragment</li>
+<li>service类，命名以Service为后缀，如：DownloadService</li>
+<li>adapter类，命名以Adapter为后缀，如：CouponListAdapter</li>
+<li>工具类，命名以Util为后缀，如：EncryptUtil</li>
+<li><del>模型类，命名以BO为后缀，如：CouponBO</del></li>
+<li><del>接口实现类，命名以Impl为后缀，如：ApiImpl</del></li>
+</ul>
+<h4 id="3-方法">3.方法</h4><p>使用小驼峰规则，用动词命名，第一个单词的首字母小写，其他单词的首字母大写。<br>以下为几种常用方法的命名：</p>
+<ul>
+<li>初始化方法，命名以init开头，例：initView</li>
+<li>按钮点击方法，命名以to开头，例：toLogin</li>
+<li>设置方法，命名以set开头，例：setData</li>
+<li>具有返回值的获取方法，命名以get开头，例：getData</li>
+<li>通过异步加载数据的方法，命名以load开头，例：loadData</li>
+<li>布尔型的判断方法，命名以is或has，或具有逻辑意义的单词如equals，例：isEmpty</li>
+</ul>
+<h4 id="4-_控件缩写">4. 控件缩写</h4><table>
+<thead>
+<tr>
+<th>控件</th>
+<th>缩写</th>
+<th>控件</th>
+<th>缩写</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>TextView</td>
+<td>txt</td>
+<td>EditText</td>
+<td>edt</td>
+</tr>
+<tr>
+<td>Button</td>
+<td>btn</td>
+<td>ImageButton</td>
+<td>ibtn</td>
+</tr>
+<tr>
+<td>ImageView</td>
+<td>img</td>
+<td>ListView</td>
+<td>list</td>
+</tr>
+<tr>
+<td>RadioGroup</td>
+<td>group</td>
+<td>RadioButton</td>
+<td>rbtn</td>
+</tr>
+<tr>
+<td>ProgressBar</td>
+<td>progress</td>
+<td>SeekBar</td>
+<td>seek</td>
+</tr>
+<tr>
+<td>CheckBox</td>
+<td>chk</td>
+<td>Spinner</td>
+<td>spinner</td>
+</tr>
+<tr>
+<td>TableLayout</td>
+<td>table</td>
+<td>TableRow</td>
+<td>row</td>
+</tr>
+<tr>
+<td>LinearLayout</td>
+<td>llayout</td>
+<td>RelativeLayout</td>
+<td>rlayout</td>
+</tr>
+<tr>
+<td>ScrollView</td>
+<td>scroll</td>
+<td>SearchView</td>
+<td>search</td>
+</tr>
+<tr>
+<td>TabHost</td>
+<td>host</td>
+<td>TabWidget</td>
+<td>widget</td>
+</tr>
+</tbody>
+</table>
+<h4 id="5-常量">5.常量</h4><p>全部为大写单词，单词之间用下划线分开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> PAGE_SIZE = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></p>
+<h4 id="6-变量">6.变量</h4><p>{范围描述+}意义描述+类型描述的组合，用驼峰式，首字母小写。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> TextView headerTitleTxt; <span class="comment">// 标题栏的标题</span></span><br><span class="line"><span class="keyword">private</span> Button loginBtn; <span class="comment">// 登录按钮</span></span><br><span class="line"><span class="keyword">private</span> CouponBO couponBO; <span class="comment">// 券实例</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="7-控件id">7.控件id</h4><p>控件缩写<em>{范围</em>}意义，范围可选，只在有明确定义的范围内才需要加上。<br><!-- 这是标题栏的标题 --><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/txt_header_title"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 这是登录按钮 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/btn_login"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="8-layout">8.layout</h4><p>组件类型<em>{范围</em>}功能，范围可选，只在有明确定义的范围内才需要加上。<br>以下为几种常用的组件类型命名：</p>
+<ul>
+<li>activity<em>{范围</em>}功能，为Activity的命名格式</li>
+<li>fragment<em>{范围</em>}功能，为Fragment的命名格式</li>
+<li>dialog<em>{范围</em>}功能，为Dialog的命名格式</li>
+<li>item<em>list</em>{范围_}功能，为ListView的item命名格式</li>
+<li>item<em>grid</em>{范围_}功能，为GridView的item命名格式</li>
+<li>header<em>list</em>{范围_}功能，为ListView的HeaderView命名格式</li>
+<li>footer<em>list</em>{范围_}功能，为ListView的FooterView命名格式</li>
+</ul>
+<h4 id="9-strings">9.strings</h4><p>类型<em>{范围</em>}功能，范围可选。<br>以下为几种常用的命名：</p>
+<ul>
+<li>页面标题，命名格式为：title_页面</li>
+<li>按钮文字，命名格式为：btn_按钮事件</li>
+<li>标签文字，命名格式为：label_标签文字</li>
+<li>选项卡文字，命名格式为：tab_选项卡文字</li>
+<li>消息框文字，命名格式为：toast_消息</li>
+<li>编辑框的提示文字，命名格式为：hint_提示信息</li>
+<li>图片的描述文字，命名格式为：desc_图片文字</li>
+<li>对话框的文字，命名格式为：dialog_文字</li>
+<li>menu的item文字，命名格式为：action_文字</li>
+</ul>
+<h4 id="10-colors">10.colors</h4><p>前缀{<em>控件}{</em>范围}{_后缀}，控件、范围、后缀可选，但控件和范围至少要有一个。</p>
+<ul>
+<li>背景颜色，添加bg前缀</li>
+<li>文本颜色，添加text前缀</li>
+<li>分割线颜色，添加div前缀</li>
+<li>区分状态时，默认状态的颜色，添加normal后缀</li>
+<li>区分状态时，按下时的颜色，添加pressed后缀</li>
+<li>区分状态时，选中时的颜色，添加selected后缀</li>
+<li>区分状态时，不可用时的颜色，添加disable后缀</li>
+</ul>
+<h4 id="11-drawable">11.drawable</h4><p>前缀{<em>控件}{</em>范围}{_后缀}，控件、范围、后缀可选，但控件和范围至少要有一个。</p>
+<ul>
+<li>图标类，添加ic前缀</li>
+<li>背景类，添加bg前缀</li>
+<li>分隔类，添加div前缀</li>
+<li>默认类，添加def前缀</li>
+<li>区分状态时，默认状态，添加normal后缀</li>
+<li>区分状态时，按下时的状态，添加pressed后缀</li>
+<li>区分状态时，选中时的状态，添加selected后缀</li>
+<li>区分状态时，不可用时的状态，添加disable后缀</li>
+<li>多种状态的，添加selector后缀（一般为ListView的selector或按钮的selector）</li>
+</ul>
+<h4 id="12-动画文件">12.动画文件</h4><p>动画类型_动画方向。</p>
+<ul>
+<li>fade_in，淡入</li>
+<li>fade_out，淡出</li>
+<li>push_down_in，从下方推入</li>
+<li>push_down_out，从下方推出</li>
+<li>slide_in_from_top，从头部滑动进入</li>
+<li>zoom_enter，变形进入</li>
+<li>shrink_to_middle，中间缩小</li>
+</ul>
+<h2 id="注释规范">注释规范</h2><h4 id="1-文件头">1.文件头</h4><p>文件顶部统一添加版权声明，声明的格式如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Copyright (c) 2016. Romens Inc. All rights reserved.</span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2-类和接口-1">2.类和接口</h4><p>类和接口统一添加javadoc注释，格式如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 类或接口的功能描述，如果需要的话</span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="3-方法-1">3.方法</h4><p>下面几种方法，最好添加javadoc注释，说明该方法的用途和参数说明，以及返回值的说明。</p>
+<ul>
+<li>接口中定义的所有方法</li>
+<li>抽象类中自定义的抽象方法</li>
+<li>抽象父类的自定义公用方法</li>
+<li>工具类的公用方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 登录</span><br><span class="line"> *</span><br><span class="line"> * <span class="doctag">@param</span> loginName 登录名</span><br><span class="line"> * <span class="doctag">@param</span> password  密码</span><br><span class="line"> * <span class="doctag">@param</span> listener  回调监听器</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">login</span><span class="params">(String loginName, String password, ActionCallbackListener&lt;Void&gt; listener)</span></span>;</span><br></pre></td></tr></table></figure>
+<h4 id="4-变量和常量">4.变量和常量</h4><p>下面几种情况下的常量和变量，都要添加注释说明，优先采用右侧//来注释，若注释说明太长则在上方添加注释。</p>
+<ul>
+<li>接口中定义的所有常量</li>
+<li>公有类的公有常量</li>
+<li>枚举类定义的所有枚举常量</li>
+<li>实体类的所有属性变量</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_CASH = <span class="number">1</span>; <span class="comment">// 现金券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DEBIT = <span class="number">2</span>; <span class="comment">// 抵扣券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DISCOUNT = <span class="number">3</span>; <span class="comment">// 折扣券</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> id;                <span class="comment">// 券id</span></span><br><span class="line"><span class="keyword">private</span> String name;           <span class="comment">// 券名称</span></span><br><span class="line"><span class="keyword">private</span> String introduce;      <span class="comment">// 券简介</span></span><br></pre></td></tr></table></figure>]]></content>
+    <summary type="html">
+    <![CDATA[<blockquote>
+<p>“The only way to make the deadline - the only way to go fast - is to keep the code as clean as possible at all times.” –Robert C. Martin</p>
+</blockquote>
+<h2 id="一、书写规范">一、书写规范</h2><h4 id="1-编码">1.编码</h4><p>编码方式统一用UTF-8. Android Studio默认已是UTF-8。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_1.png" alt="1"><br>]]>
+    
+    </summary>
+    
+      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/tags/Android/"/>
+    
+      <category term="总结" scheme="http://jiuzhou-romens.github.io.git/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/categories/Android/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[API 接口规范]]></title>
@@ -151,192 +442,6 @@
 <li>依赖倒置</li>
 <li>低耦合、高内聚</li>
 <li>易于扩展]]>
-    
-    </summary>
-    
-      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/tags/Android/"/>
-    
-      <category term="总结" scheme="http://jiuzhou-romens.github.io.git/tags/%E6%80%BB%E7%BB%93/"/>
-    
-      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/categories/Android/"/>
-    
-  </entry>
-  
-  <entry>
-    <title><![CDATA[Andriod 开发规范]]></title>
-    <link href="http://jiuzhou-romens.github.io.git/2016/05/26/Android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83/"/>
-    <id>http://jiuzhou-romens.github.io.git/2016/05/26/Android开发规范/</id>
-    <published>2016-05-26T02:13:14.000Z</published>
-    <updated>2016-05-26T02:13:14.000Z</updated>
-    <content type="html"><![CDATA[<blockquote>
-<p>“The only way to make the deadline - the only way to go fast - is to keep the code as clean as possible at all times.” –Robert C. Martin</p>
-</blockquote>
-<h2 id="一、书写规范">一、书写规范</h2><h4 id="1-编码">1.编码</h4><p>编码方式统一用UTF-8. Android Studio默认已是UTF-8。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_1.png" alt="1"><br><a id="more"></a></p>
-<h4 id="2-缩进">2.缩进</h4><p>缩进统一为4个空格，将Tab size设置为4则可以保证tab键按4个空格缩进。另外，不要勾选上Use tab character，可以保证切换到不同tab长度的环境时还能继续保持统一的4个空格的缩进样式。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_2.png" alt="2"></p>
-<h4 id="3-括号">3.括号</h4><p>花括号不要单独一行，和它前面的代码同一行。而且，花括号与前面的代码之间用一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span> </span>&#123; <span class="comment">// Good</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span><br><span class="line"></span>&#123; <span class="comment">// Bad</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">()</span></span>&#123; <span class="comment">// Bad</span></span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<h4 id="4-空格">4.空格</h4><p>if、else、for、switch、while等逻辑关键字与后面的语句留一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// Good</span></span><br><span class="line"><span class="keyword">if</span> (booleanVariable) &#123;</span><br><span class="line">    <span class="comment">// TODO while booleanVariable is true</span></span><br><span class="line">&#125; <span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// TODO else</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// Bad</span></span><br><span class="line"><span class="keyword">if</span>(booleanVariable) &#123;</span><br><span class="line">    <span class="comment">// TODO while booleanVariable is true</span></span><br><span class="line">&#125;<span class="keyword">else</span> &#123;</span><br><span class="line">    <span class="comment">// TODO else</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
-<p>运算符两边各用一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">int</span> result = a + b; <span class="comment">//Good, = 和 + 两边各用一个空格隔开</span></span><br><span class="line"><span class="keyword">int</span> result=a+b; <span class="comment">//Bad,=和+两边没用空格隔开</span></span><br></pre></td></tr></table></figure></p>
-<p>方法的每个参数之间用一个空格隔开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">method</span><span class="params">(String param1, String param2)</span></span>; <span class="comment">// Good，param1后面的逗号与String之间隔了一个空格</span></span><br><span class="line">method(param1, param2); <span class="comment">// Good，方法调用时，param1后面的逗号与param2之间隔了一个空格</span></span><br><span class="line">method(param1,param2); <span class="comment">// Bad，没有用一个空格隔开</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="5-空行">5.空行</h4><p>将逻辑相关的代码段用空行隔开，以提高可读性。空行也只空一行，不要空多行。在以下情况需用一个空行：</p>
-<ul>
-<li>两个方法之间</li>
-<li>方法内的两个逻辑段之间</li>
-<li>方法内的局部变量和方法的第一条逻辑语句之间（一般用不着，用得着的话可能需要重构了）</li>
-<li>常量和变量之间</li>
-</ul>
-<h4 id="6-换行">6.换行</h4><p>当一个表达式无法容纳在一行内时，可换行显示，另起的新行用8个空格缩进。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">someMethod(longExpression1, longExpression2, longExpression3,</span><br><span class="line">        longExpression4, longExpression5);</span><br></pre></td></tr></table></figure></p>
-<h4 id="7-声明">7.声明</h4><p>一行声明一个变量，不要一行声明多个变量，这样有利于写注释。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String param1; <span class="comment">// 参数1</span></span><br><span class="line"><span class="keyword">private</span> String param2; <span class="comment">// 参数2</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="8-行宽">8.行宽</h4><p>行宽设置为100，设置格式化时自动断行到行宽位置。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_3.jpeg" alt="3"><br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_4.jpeg" alt="4"></p>
-<h4 id="9-格式化">9.格式化</h4><p>使用快捷键进行代码自动格式化，每次提交前请右键单击项目文件夹–&gt;Reformat Code–&gt;勾选上Optimize imports和File masks(*.java)–&gt;Run<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mac：OPTION+COMMAND+L</span><br></pre></td></tr></table></figure></p>
-<h4 id="10-方法行数">10.方法行数</h4><p>一个方法最多不要超过40行代码，大概一个屏幕</p>
-<h4 id="11-常量">11.常量</h4><p>范围型的常量用枚举类定义，而不要直接用整型或字符，这样可以减少范围值的有效性检查。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用枚举类定义，Good</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CouponType &#123;</span><br><span class="line">    <span class="comment">// 现金券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"1"</span>)</span><br><span class="line">    CASH,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抵用券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"2"</span>)</span><br><span class="line">    DEBIT,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 折扣券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"3"</span>)</span><br><span class="line">    DISCOUNT</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用整型定义，Bad</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_CASH = <span class="number">1</span>; <span class="comment">// 现金券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DEBIT = <span class="number">2</span>; <span class="comment">// 抵扣券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DISCOUNT = <span class="number">3</span>; <span class="comment">// 折扣券</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="12-大小单位">12.大小单位</h4><p>文字大小的单位统一用sp，元素大小的单位统一用dp。</p>
-<h4 id="13-String值定义">13.String值定义</h4><p>应用中的字符串统一在strings.xml中定义，然后在代码和布局文件中引用。</p>
-<h4 id="14-颜色值定义">14.颜色值定义</h4><p>颜色值统一在colors.xml中定义，然后在代码和布局文件中引用。另外，不要在代码和布局文件中引用系统的颜色，除了透明，因为一旦升级版本，可能会改变。</p>
-<h2 id="命名规范">命名规范</h2><h4 id="1-包">1.包</h4><p>域名反写+项目名称+模块名称，全部单词用小写字母。<br>例如，Grab项目的app模块包名如下：<br>cn.romens.grab.app</p>
-<h4 id="2-类和接口">2.类和接口</h4><p>使用大驼峰规则，用名词或名词词组命名，每个单词的首字母大写。<br>以下为几种常用类的命名：</p>
-<ul>
-<li>activity类，命名以Activity为后缀，如：LoginActivity</li>
-<li>fragment类，命名以Fragment为后缀，如：ShareDialogFragment</li>
-<li>service类，命名以Service为后缀，如：DownloadService</li>
-<li>adapter类，命名以Adapter为后缀，如：CouponListAdapter</li>
-<li>工具类，写在util包下</li>
-<li>接口实现类，如果是单一实现类，命名以Impl为后缀，如：ApiImpl</li>
-</ul>
-<h4 id="3-方法">3.方法</h4><p>使用小驼峰规则，用动词命名，第一个单词的首字母小写，其他单词的首字母大写。<br>以下为几种常用方法的命名：</p>
-<ul>
-<li>初始化方法，命名以init开头，例：initView</li>
-<li>流程的下一步方法，命名以to开头，例：toLogin</li>
-<li>设置方法，命名以set开头，例：setData</li>
-<li>具有返回值的获取方法，命名以get开头，例：getData</li>
-<li>通过异步加载数据的方法，命名以load开头，例：loadData</li>
-<li>布尔型的判断方法，命名以is或has，或具有逻辑意义的单词如equals，例：isEmpty</li>
-</ul>
-<h4 id="4-_控件缩写">4. 控件缩写</h4><table>
-<thead>
-<tr>
-<th>控件</th>
-<th>缩写</th>
-<th>控件</th>
-<th>缩写</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>TextView</td>
-<td>tv</td>
-<td>EditText</td>
-<td>edit</td>
-</tr>
-<tr>
-<td>Button</td>
-<td>btn</td>
-<td>ImageButton</td>
-<td>imgbtn</td>
-</tr>
-<tr>
-<td>ImageView</td>
-<td>img</td>
-<td>ListView</td>
-<td>listview</td>
-</tr>
-<tr>
-<td>RadioGroup</td>
-<td>group</td>
-<td>RadioButton</td>
-<td>radiobtn</td>
-</tr>
-<tr>
-<td>ProgressBar</td>
-<td>progress</td>
-<td>SeekBar</td>
-<td>seek</td>
-</tr>
-<tr>
-<td>CheckBox</td>
-<td>chk</td>
-<td>Spinner</td>
-<td>spinner</td>
-</tr>
-<tr>
-<td>TableLayout</td>
-<td>table</td>
-<td>TableRow</td>
-<td>row</td>
-</tr>
-<tr>
-<td>LinearLayout</td>
-<td>ll</td>
-<td>RelativeLayout</td>
-<td>rl</td>
-</tr>
-<tr>
-<td>SearchView</td>
-<td>search</td>
-<td>TabWidget</td>
-<td>widget</td>
-</tr>
-</tbody>
-</table>
-<h4 id="5-常量">5.常量</h4><p>全部为大写单词，单词之间用下划线分开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> PAGE_SIZE = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></p>
-<h4 id="6-变量">6.变量</h4><p>如果变量较少，直接使用意义描述即可；如果变量较多，容易重复的话，使用<strong>{范围描述+}意义描述+类型描述</strong>的组合，用驼峰式，首字母小写。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> TextView headerTitleTxt; <span class="comment">// 标题栏的标题</span></span><br><span class="line"><span class="keyword">private</span> Button loginBtn; <span class="comment">// 登录按钮</span></span><br><span class="line"><span class="keyword">private</span> Person person; <span class="comment">// 人实例</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="7-控件id">7.控件id</h4><p>如果控件较少，直接使用意义描述即可；如果变量较多，容易重复的话，使用<strong>{范围<em>}意义</em>控件缩写</strong>，范围可选，只在有明确定义的范围内才需要加上。<br><!-- 这是标题栏的标题 --><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/header_title"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 这是登录按钮 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/login"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="8-layout">8.layout</h4><p>组件类型<em>{范围</em>}功能，范围可选，只在有明确定义的范围内才需要加上。<br>以下为几种常用的组件类型命名：</p>
-<ul>
-<li>activity<em>{范围</em>}功能，为Activity的命名格式</li>
-<li>fragment<em>{范围</em>}功能，为Fragment的命名格式</li>
-<li>dialog<em>{范围</em>}功能，为Dialog的命名格式</li>
-<li>item<em>list</em>{范围_}功能，为ListView的item命名格式</li>
-<li>item<em>recycler</em>{范围_}功能，为RecyclerView的item命名格式</li>
-<li>item<em>grid</em>{范围_}功能，为GridView的item命名格式</li>
-<li>header<em>list</em>{范围_}功能，为ListView的HeaderView命名格式</li>
-<li>footer<em>list</em>{范围_}功能，为ListView的FooterView命名格式</li>
-<li>include_功能，用于公共布局（引用方式：include）</li>
-<li>custom<em>功能</em>类型，自定义控件布局 </li>
-</ul>
-<h4 id="9-strings">9.strings</h4><p>范围_功能，范围可选，以功能分类写注释<br>以下为几种常用的命名：</p>
-<ul>
-<li>LoginActivity中的页面标题，命名格式为：login_header_title</li>
-<li>LoginActivity中的按钮文字，命名格式为：login<em>btn</em>按钮事件</li>
-<li>LoginFragment中的标签文字，命名格式为：login<em>label</em>标签文字</li>
-<li>选项卡文字，命名格式为：范围<em>(tab</em>)选项卡文字</li>
-<li>消息框文字，命名格式为：范围<em>(toast</em>)消息</li>
-<li>编辑框的提示文字，命名格式为：范围<em>hint</em>提示信息</li>
-<li>图片的描述文字，命名格式为：范围<em>(desc</em>)图片文字</li>
-<li>对话框的文字，命名格式为：范围<em>dialog</em>文字</li>
-<li>menu的item文字，命名格式为：范围<em>action</em>文字</li>
-</ul>
-<h4 id="10-colors">10.colors</h4><p>以颜色命名，写了不能改</p>
-<h4 id="11-drawable">11.drawable</h4><p>前缀{<em>控件}{</em>形状/颜色/etc.}{_后缀}，控件、后缀可选，但控件和范围至少要有一个。</p>
-<ul>
-<li>图标类，添加ic前缀</li>
-<li>背景类，添加bg前缀</li>
-<li>分隔类，添加div前缀</li>
-<li>区分状态时，默认状态，添加normal后缀</li>
-<li>区分状态时，按下时的状态，添加pressed后缀</li>
-<li>区分状态时，选中时的状态，添加selected后缀</li>
-<li>区分状态时，不可用时的状态，添加disable后缀</li>
-<li>多种状态的，添加selector后缀（一般为ListView的selector或按钮的selector）</li>
-</ul>
-<h4 id="12-动画文件">12.动画文件</h4><p>动画类型_动画方向。</p>
-<ul>
-<li>fade_in，淡入</li>
-<li>fade_out，淡出</li>
-<li>push_down_in，从下方推入</li>
-<li>push_down_out，从下方推出</li>
-<li>slide_in_from_top，从头部滑动进入</li>
-<li>zoom_enter，变形进入</li>
-<li>shrink_to_middle，中间缩小</li>
-</ul>
-<h2 id="注释规范">注释规范</h2><p>必要时写注释</p>
-<p>命名写清晰</p>
-<p>注释就用不着了，除非你自己都看不懂了</p>
-]]></content>
-    <summary type="html">
-    <![CDATA[<blockquote>
-<p>“The only way to make the deadline - the only way to go fast - is to keep the code as clean as possible at all times.” –Robert C. Martin</p>
-</blockquote>
-<h2 id="一、书写规范">一、书写规范</h2><h4 id="1-编码">1.编码</h4><p>编码方式统一用UTF-8. Android Studio默认已是UTF-8。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_1.png" alt="1"><br>]]>
     
     </summary>
     

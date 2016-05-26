@@ -19,7 +19,7 @@
 <meta property="og:image" content="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_2.png">
 <meta property="og:image" content="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_3.jpeg">
 <meta property="og:image" content="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_4.jpeg">
-<meta property="og:updated_time" content="2016-05-26T02:13:14.000Z">
+<meta property="og:updated_time" content="2016-05-26T02:33:17.000Z">
 <meta name="twitter:card" content="summary">
 <meta name="twitter:title" content="Andriod 开发规范">
 <meta name="twitter:description" content="“The only way to make the deadline - the only way to go fast - is to keep the code as clean as possible at all times.” –Robert C. Martin
@@ -127,7 +127,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Alcatraz/" style="font-size: 10px;">Alcatraz</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Restful/" style="font-size: 10px;">Restful</a> <a href="/tags/SDWebImage/" style="font-size: 10px;">SDWebImage</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/UILable/" style="font-size: 10px;">UILable</a> <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iOS之UI控件/" style="font-size: 10px;">iOS之UI控件</a> <a href="/tags/主题/" style="font-size: 10px;">主题</a> <a href="/tags/基础/" style="font-size: 15px;">基础</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/总结/" style="font-size: 20px;">总结</a>
+						<a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Alcatraz/" style="font-size: 10px;">Alcatraz</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Restful/" style="font-size: 10px;">Restful</a> <a href="/tags/SDWebImage/" style="font-size: 10px;">SDWebImage</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/UILable/" style="font-size: 10px;">UILable</a> <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iOS之UI控件/" style="font-size: 10px;">iOS之UI控件</a> <a href="/tags/主题/" style="font-size: 10px;">主题</a> <a href="/tags/基础/" style="font-size: 15px;">基础</a> <a href="/tags/学习记录/" style="font-size: 10px;">学习记录</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/总结/" style="font-size: 20px;">总结</a>
 					</div>
 				</section>
 				
@@ -203,7 +203,7 @@
   
     <div class="article-meta">
       <a href="/2016/05/26/Android开发规范/" class="article-date">
-  	<time datetime="2016-05-26T02:13:14.000Z" itemprop="datePublished">May 26 2016</time>
+  	<time datetime="2016-05-26T02:33:17.000Z" itemprop="datePublished">May 26 2016</time>
 </a>
     </div>
   
@@ -253,14 +253,14 @@
 <ul>
 <li>两个方法之间</li>
 <li>方法内的两个逻辑段之间</li>
-<li>方法内的局部变量和方法的第一条逻辑语句之间（一般用不着，用得着的话可能需要重构了）</li>
+<li><del>方法内的局部变量和方法的第一条逻辑语句之间</del></li>
 <li>常量和变量之间</li>
 </ul>
 <h4 id="6-换行">6.换行</h4><p>当一个表达式无法容纳在一行内时，可换行显示，另起的新行用8个空格缩进。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">someMethod(longExpression1, longExpression2, longExpression3,</span><br><span class="line">        longExpression4, longExpression5);</span><br></pre></td></tr></table></figure></p>
 <h4 id="7-声明">7.声明</h4><p>一行声明一个变量，不要一行声明多个变量，这样有利于写注释。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> String param1; <span class="comment">// 参数1</span></span><br><span class="line"><span class="keyword">private</span> String param2; <span class="comment">// 参数2</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="8-行宽">8.行宽</h4><p>行宽设置为100，设置格式化时自动断行到行宽位置。<br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_3.jpeg" alt="3"><br><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/Romens%20android%E5%BC%80%E5%8F%91%E8%A7%84%E8%8C%83_4.jpeg" alt="4"></p>
-<h4 id="9-格式化">9.格式化</h4><p>使用快捷键进行代码自动格式化，每次提交前请右键单击项目文件夹–&gt;Reformat Code–&gt;勾选上Optimize imports和File masks(*.java)–&gt;Run<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">Mac：OPTION+COMMAND+L</span><br></pre></td></tr></table></figure></p>
-<h4 id="10-方法行数">10.方法行数</h4><p>一个方法最多不要超过40行代码，大概一个屏幕</p>
+<h4 id="9-格式化">9.格式化</h4><p>使用快捷键进行代码自动格式化。<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">Windows：CTRL+ALT+L</span><br><span class="line">Mac：OPTION+COMMAND+L</span><br></pre></td></tr></table></figure></p>
+<h4 id="10-方法行数">10.方法行数</h4><p>一个方法最多不要超过40行代码。</p>
 <h4 id="11-常量">11.常量</h4><p>范围型的常量用枚举类定义，而不要直接用整型或字符，这样可以减少范围值的有效性检查。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">// 用枚举类定义，Good</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">enum</span> CouponType &#123;</span><br><span class="line">    <span class="comment">// 现金券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"1"</span>)</span><br><span class="line">    CASH,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 抵用券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"2"</span>)</span><br><span class="line">    DEBIT,</span><br><span class="line"></span><br><span class="line">    <span class="comment">// 折扣券</span></span><br><span class="line">    <span class="annotation">@SerializedName</span>(<span class="string">"3"</span>)</span><br><span class="line">    DISCOUNT</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">// 用整型定义，Bad</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_CASH = <span class="number">1</span>; <span class="comment">// 现金券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DEBIT = <span class="number">2</span>; <span class="comment">// 抵扣券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DISCOUNT = <span class="number">3</span>; <span class="comment">// 折扣券</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="12-大小单位">12.大小单位</h4><p>文字大小的单位统一用sp，元素大小的单位统一用dp。</p>
 <h4 id="13-String值定义">13.String值定义</h4><p>应用中的字符串统一在strings.xml中定义，然后在代码和布局文件中引用。</p>
@@ -272,13 +272,14 @@
 <li>fragment类，命名以Fragment为后缀，如：ShareDialogFragment</li>
 <li>service类，命名以Service为后缀，如：DownloadService</li>
 <li>adapter类，命名以Adapter为后缀，如：CouponListAdapter</li>
-<li>工具类，写在util包下</li>
-<li>接口实现类，如果是单一实现类，命名以Impl为后缀，如：ApiImpl</li>
+<li>工具类，命名以Util为后缀，如：EncryptUtil</li>
+<li><del>模型类，命名以BO为后缀，如：CouponBO</del></li>
+<li><del>接口实现类，命名以Impl为后缀，如：ApiImpl</del></li>
 </ul>
 <h4 id="3-方法">3.方法</h4><p>使用小驼峰规则，用动词命名，第一个单词的首字母小写，其他单词的首字母大写。<br>以下为几种常用方法的命名：</p>
 <ul>
 <li>初始化方法，命名以init开头，例：initView</li>
-<li>流程的下一步方法，命名以to开头，例：toLogin</li>
+<li>按钮点击方法，命名以to开头，例：toLogin</li>
 <li>设置方法，命名以set开头，例：setData</li>
 <li>具有返回值的获取方法，命名以get开头，例：getData</li>
 <li>通过异步加载数据的方法，命名以load开头，例：loadData</li>
@@ -296,27 +297,27 @@
 <tbody>
 <tr>
 <td>TextView</td>
-<td>tv</td>
+<td>txt</td>
 <td>EditText</td>
-<td>edit</td>
+<td>edt</td>
 </tr>
 <tr>
 <td>Button</td>
 <td>btn</td>
 <td>ImageButton</td>
-<td>imgbtn</td>
+<td>ibtn</td>
 </tr>
 <tr>
 <td>ImageView</td>
 <td>img</td>
 <td>ListView</td>
-<td>listview</td>
+<td>list</td>
 </tr>
 <tr>
 <td>RadioGroup</td>
 <td>group</td>
 <td>RadioButton</td>
-<td>radiobtn</td>
+<td>rbtn</td>
 </tr>
 <tr>
 <td>ProgressBar</td>
@@ -338,52 +339,65 @@
 </tr>
 <tr>
 <td>LinearLayout</td>
-<td>ll</td>
+<td>llayout</td>
 <td>RelativeLayout</td>
-<td>rl</td>
+<td>rlayout</td>
 </tr>
 <tr>
+<td>ScrollView</td>
+<td>scroll</td>
 <td>SearchView</td>
 <td>search</td>
+</tr>
+<tr>
+<td>TabHost</td>
+<td>host</td>
 <td>TabWidget</td>
 <td>widget</td>
 </tr>
 </tbody>
 </table>
 <h4 id="5-常量">5.常量</h4><p>全部为大写单词，单词之间用下划线分开。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">final</span> <span class="keyword">static</span> <span class="keyword">int</span> PAGE_SIZE = <span class="number">20</span>;</span><br></pre></td></tr></table></figure></p>
-<h4 id="6-变量">6.变量</h4><p>如果变量较少，直接使用意义描述即可；如果变量较多，容易重复的话，使用<strong>{范围描述+}意义描述+类型描述</strong>的组合，用驼峰式，首字母小写。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> TextView headerTitleTxt; <span class="comment">// 标题栏的标题</span></span><br><span class="line"><span class="keyword">private</span> Button loginBtn; <span class="comment">// 登录按钮</span></span><br><span class="line"><span class="keyword">private</span> Person person; <span class="comment">// 人实例</span></span><br></pre></td></tr></table></figure></p>
-<h4 id="7-控件id">7.控件id</h4><p>如果控件较少，直接使用意义描述即可；如果变量较多，容易重复的话，使用<strong>{范围<em>}意义</em>控件缩写</strong>，范围可选，只在有明确定义的范围内才需要加上。<br><!-- 这是标题栏的标题 --><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/header_title"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 这是登录按钮 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/login"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="6-变量">6.变量</h4><p>{范围描述+}意义描述+类型描述的组合，用驼峰式，首字母小写。<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">private</span> TextView headerTitleTxt; <span class="comment">// 标题栏的标题</span></span><br><span class="line"><span class="keyword">private</span> Button loginBtn; <span class="comment">// 登录按钮</span></span><br><span class="line"><span class="keyword">private</span> CouponBO couponBO; <span class="comment">// 券实例</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="7-控件id">7.控件id</h4><p>控件缩写<em>{范围</em>}意义，范围可选，只在有明确定义的范围内才需要加上。<br><!-- 这是标题栏的标题 --><br><figure class="highlight xml"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="tag">&lt;<span class="title">TextView</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/txt_header_title"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br><span class="line"></span><br><span class="line"><span class="comment">&lt;!-- 这是登录按钮 --&gt;</span></span><br><span class="line"><span class="tag">&lt;<span class="title">Button</span></span><br><span class="line">    <span class="attribute">android:id</span>=<span class="value">"@+id/btn_login"</span></span><br><span class="line">    <span class="attribute">...</span> /&gt;</span></span><br></pre></td></tr></table></figure></p>
 <h4 id="8-layout">8.layout</h4><p>组件类型<em>{范围</em>}功能，范围可选，只在有明确定义的范围内才需要加上。<br>以下为几种常用的组件类型命名：</p>
 <ul>
 <li>activity<em>{范围</em>}功能，为Activity的命名格式</li>
 <li>fragment<em>{范围</em>}功能，为Fragment的命名格式</li>
 <li>dialog<em>{范围</em>}功能，为Dialog的命名格式</li>
 <li>item<em>list</em>{范围_}功能，为ListView的item命名格式</li>
-<li>item<em>recycler</em>{范围_}功能，为RecyclerView的item命名格式</li>
 <li>item<em>grid</em>{范围_}功能，为GridView的item命名格式</li>
 <li>header<em>list</em>{范围_}功能，为ListView的HeaderView命名格式</li>
 <li>footer<em>list</em>{范围_}功能，为ListView的FooterView命名格式</li>
-<li>include_功能，用于公共布局（引用方式：include）</li>
-<li>custom<em>功能</em>类型，自定义控件布局 </li>
 </ul>
-<h4 id="9-strings">9.strings</h4><p>范围_功能，范围可选，以功能分类写注释<br>以下为几种常用的命名：</p>
+<h4 id="9-strings">9.strings</h4><p>类型<em>{范围</em>}功能，范围可选。<br>以下为几种常用的命名：</p>
 <ul>
-<li>LoginActivity中的页面标题，命名格式为：login_header_title</li>
-<li>LoginActivity中的按钮文字，命名格式为：login<em>btn</em>按钮事件</li>
-<li>LoginFragment中的标签文字，命名格式为：login<em>label</em>标签文字</li>
-<li>选项卡文字，命名格式为：范围<em>(tab</em>)选项卡文字</li>
-<li>消息框文字，命名格式为：范围<em>(toast</em>)消息</li>
-<li>编辑框的提示文字，命名格式为：范围<em>hint</em>提示信息</li>
-<li>图片的描述文字，命名格式为：范围<em>(desc</em>)图片文字</li>
-<li>对话框的文字，命名格式为：范围<em>dialog</em>文字</li>
-<li>menu的item文字，命名格式为：范围<em>action</em>文字</li>
+<li>页面标题，命名格式为：title_页面</li>
+<li>按钮文字，命名格式为：btn_按钮事件</li>
+<li>标签文字，命名格式为：label_标签文字</li>
+<li>选项卡文字，命名格式为：tab_选项卡文字</li>
+<li>消息框文字，命名格式为：toast_消息</li>
+<li>编辑框的提示文字，命名格式为：hint_提示信息</li>
+<li>图片的描述文字，命名格式为：desc_图片文字</li>
+<li>对话框的文字，命名格式为：dialog_文字</li>
+<li>menu的item文字，命名格式为：action_文字</li>
 </ul>
-<h4 id="10-colors">10.colors</h4><p>以颜色命名，写了不能改</p>
-<h4 id="11-drawable">11.drawable</h4><p>前缀{<em>控件}{</em>形状/颜色/etc.}{_后缀}，控件、后缀可选，但控件和范围至少要有一个。</p>
+<h4 id="10-colors">10.colors</h4><p>前缀{<em>控件}{</em>范围}{_后缀}，控件、范围、后缀可选，但控件和范围至少要有一个。</p>
+<ul>
+<li>背景颜色，添加bg前缀</li>
+<li>文本颜色，添加text前缀</li>
+<li>分割线颜色，添加div前缀</li>
+<li>区分状态时，默认状态的颜色，添加normal后缀</li>
+<li>区分状态时，按下时的颜色，添加pressed后缀</li>
+<li>区分状态时，选中时的颜色，添加selected后缀</li>
+<li>区分状态时，不可用时的颜色，添加disable后缀</li>
+</ul>
+<h4 id="11-drawable">11.drawable</h4><p>前缀{<em>控件}{</em>范围}{_后缀}，控件、范围、后缀可选，但控件和范围至少要有一个。</p>
 <ul>
 <li>图标类，添加ic前缀</li>
 <li>背景类，添加bg前缀</li>
 <li>分隔类，添加div前缀</li>
+<li>默认类，添加def前缀</li>
 <li>区分状态时，默认状态，添加normal后缀</li>
 <li>区分状态时，按下时的状态，添加pressed后缀</li>
 <li>区分状态时，选中时的状态，添加selected后缀</li>
@@ -400,10 +414,24 @@
 <li>zoom_enter，变形进入</li>
 <li>shrink_to_middle，中间缩小</li>
 </ul>
-<h2 id="注释规范">注释规范</h2><p>必要时写注释</p>
-<p>命名写清晰</p>
-<p>注释就用不着了，除非你自己都看不懂了</p>
-
+<h2 id="注释规范">注释规范</h2><h4 id="1-文件头">1.文件头</h4><p>文件顶部统一添加版权声明，声明的格式如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * Copyright (c) 2016. Romens Inc. All rights reserved.</span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="2-类和接口-1">2.类和接口</h4><p>类和接口统一添加javadoc注释，格式如下：<br><figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 类或接口的功能描述，如果需要的话</span><br><span class="line"> */</span></span><br></pre></td></tr></table></figure></p>
+<h4 id="3-方法-1">3.方法</h4><p>下面几种方法，最好添加javadoc注释，说明该方法的用途和参数说明，以及返回值的说明。</p>
+<ul>
+<li>接口中定义的所有方法</li>
+<li>抽象类中自定义的抽象方法</li>
+<li>抽象父类的自定义公用方法</li>
+<li>工具类的公用方法</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span><br><span class="line"> * 登录</span><br><span class="line"> *</span><br><span class="line"> * <span class="doctag">@param</span> loginName 登录名</span><br><span class="line"> * <span class="doctag">@param</span> password  密码</span><br><span class="line"> * <span class="doctag">@param</span> listener  回调监听器</span><br><span class="line"> */</span></span><br><span class="line"><span class="function"><span class="keyword">public</span> <span class="keyword">void</span> <span class="title">login</span><span class="params">(String loginName, String password, ActionCallbackListener&lt;Void&gt; listener)</span></span>;</span><br></pre></td></tr></table></figure>
+<h4 id="4-变量和常量">4.变量和常量</h4><p>下面几种情况下的常量和变量，都要添加注释说明，优先采用右侧//来注释，若注释说明太长则在上方添加注释。</p>
+<ul>
+<li>接口中定义的所有常量</li>
+<li>公有类的公有常量</li>
+<li>枚举类定义的所有枚举常量</li>
+<li>实体类的所有属性变量</li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_CASH = <span class="number">1</span>; <span class="comment">// 现金券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DEBIT = <span class="number">2</span>; <span class="comment">// 抵扣券</span></span><br><span class="line"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">final</span> <span class="keyword">int</span> TYPE_DISCOUNT = <span class="number">3</span>; <span class="comment">// 折扣券</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">private</span> <span class="keyword">int</span> id;                <span class="comment">// 券id</span></span><br><span class="line"><span class="keyword">private</span> String name;           <span class="comment">// 券名称</span></span><br><span class="line"><span class="keyword">private</span> String introduce;      <span class="comment">// 券简介</span></span><br></pre></td></tr></table></figure>
       
     </div>
     
@@ -412,18 +440,18 @@
     
 <nav id="article-nav">
   
-    <a href="/2016/05/26/Android项目架构设计/" id="article-nav-newer" class="article-nav-link-wrap">
+    <a href="/2016/05/26/Android开发学习/" id="article-nav-newer" class="article-nav-link-wrap">
       <strong class="article-nav-caption"><</strong>
       <div class="article-nav-title">
         
-          Andriod 架构设计
+          Android 开发学习
         
       </div>
     </a>
   
   
-    <a href="/2016/05/25/Swagger使用/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Swagger 使用</div>
+    <a href="/2016/05/26/API接口规范/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">API 接口规范</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
