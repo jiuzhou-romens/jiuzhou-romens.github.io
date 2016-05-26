@@ -116,7 +116,7 @@
 				
 				<section class="switch-part switch-part2">
 					<div class="widget tagcloud" id="js-tagcloud">
-						<a href="/tags/Alcatraz/" style="font-size: 10px;">Alcatraz</a> <a href="/tags/Android/" style="font-size: 20px;">Android</a> <a href="/tags/Hexo/" style="font-size: 20px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Restful/" style="font-size: 10px;">Restful</a> <a href="/tags/SDWebImage/" style="font-size: 10px;">SDWebImage</a> <a href="/tags/Swift/" style="font-size: 20px;">Swift</a> <a href="/tags/UILable/" style="font-size: 10px;">UILable</a> <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iOS之UI控件/" style="font-size: 10px;">iOS之UI控件</a> <a href="/tags/主题/" style="font-size: 10px;">主题</a> <a href="/tags/基础/" style="font-size: 20px;">基础</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/总结/" style="font-size: 20px;">总结</a>
+						<a href="/tags/API/" style="font-size: 10px;">API</a> <a href="/tags/Alcatraz/" style="font-size: 10px;">Alcatraz</a> <a href="/tags/Android/" style="font-size: 15px;">Android</a> <a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Markdown/" style="font-size: 10px;">Markdown</a> <a href="/tags/Objective-C/" style="font-size: 10px;">Objective-C</a> <a href="/tags/Restful/" style="font-size: 10px;">Restful</a> <a href="/tags/SDWebImage/" style="font-size: 10px;">SDWebImage</a> <a href="/tags/Swift/" style="font-size: 15px;">Swift</a> <a href="/tags/UILable/" style="font-size: 10px;">UILable</a> <a href="/tags/Xcode/" style="font-size: 10px;">Xcode</a> <a href="/tags/iOS/" style="font-size: 10px;">iOS</a> <a href="/tags/iOS之UI控件/" style="font-size: 10px;">iOS之UI控件</a> <a href="/tags/主题/" style="font-size: 10px;">主题</a> <a href="/tags/基础/" style="font-size: 15px;">基础</a> <a href="/tags/工具/" style="font-size: 10px;">工具</a> <a href="/tags/总结/" style="font-size: 20px;">总结</a>
 					</div>
 				</section>
 				
@@ -189,6 +189,77 @@
 	</div>
 </nav>
       <div class="body-wrap">
+  
+    <article id="post-API接口规范" class="article article-type-post" itemscope itemprop="blogPost">
+  
+    <div class="article-meta">
+      <a href="/2016/05/26/API接口规范/" class="article-date">
+  	<time datetime="2016-05-26T02:27:09.000Z" itemprop="datePublished">May 26 2016</time>
+</a>
+    </div>
+  
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 itemprop="name">
+      <a class="article-title" href="/2016/05/26/API接口规范/">API 接口规范</a>
+    </h1>
+  
+
+      </header>
+      
+    
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="安全机制">安全机制</h2><p>登录安全：</p>
+<ol>
+<li>密码登录后，服务器返回token给客户端</li>
+<li>客户端保存token，每次发起请求时必须带上token</li>
+<li>服务器检查token，若无效：<ol>
+<li>token错误，则重新登录，刷新token</li>
+<li>token过期，发起认证请求，获取新token<br>每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。<br>纯app端可以采用另一种方式：<br>不用密码登录，直接手机号加短信验证码登录，好处：</li>
+</ol>
+</li>
+<li>用不着重置密码操作了</li>
+<li>不需要记密码，不怕密码泄露
+      
+    </div>
+    
+    <div class="article-info article-info-index">
+      
+      
+	<div class="article-tag tagcloud">
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/API/">API</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
+	</div>
+
+      
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/dev/">dev</a>
+	</div>
+
+
+      
+        <p class="article-more-link">
+          <a  href="/2016/05/26/API接口规范/#more">more >></a>
+        </p>
+      
+      <div class="clearfix"></div>
+    </div>
+    
+  </div>
+  
+</article>
+
+
+
+
+
+
   
     <article id="post-Android项目架构设计" class="article article-type-post" itemscope itemprop="blogPost">
   
@@ -721,63 +792,6 @@
       
         <p class="article-more-link">
           <a  href="/2015/11/24/Hexo主题/#more">more >></a>
-        </p>
-      
-      <div class="clearfix"></div>
-    </div>
-    
-  </div>
-  
-</article>
-
-
-
-
-
-
-  
-    <article id="post-Hello World" class="article article-type-post" itemscope itemprop="blogPost">
-  
-    <div class="article-meta">
-      <a href="/2015/11/23/Hello World/" class="article-date">
-  	<time datetime="2015-11-23T08:51:53.000Z" itemprop="datePublished">Nov 23 2015</time>
-</a>
-    </div>
-  
-  <div class="article-inner">
-    
-      <input type="hidden" class="isFancy" />
-    
-    
-      <header class="article-header">
-        
-  
-    <h1 itemprop="name">
-      <a class="article-title" href="/2015/11/23/Hello World/">Hello World</a>
-    </h1>
-  
-
-      </header>
-      
-    
-    <div class="article-entry" itemprop="articleBody">
-      
-        <p>Welcome to <a href="http://hexo.io/">Hexo</a>! This is your very first post. Check <a href="http://hexo.io/docs/">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="http://hexo.io/docs/troubleshooting.html">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues">GitHub</a>.<br>
-      
-    </div>
-    
-    <div class="article-info article-info-index">
-      
-      
-	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Hexo/">Hexo</a></li></ul>
-	</div>
-
-      
-
-      
-        <p class="article-more-link">
-          <a  href="/2015/11/23/Hello World/#more">more >></a>
         </p>
       
       <div class="clearfix"></div>

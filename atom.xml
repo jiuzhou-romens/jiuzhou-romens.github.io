@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2016-05-26T02:23:05.000Z</updated>
+  <updated>2016-05-26T02:27:09.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -13,6 +13,87 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[API 接口规范]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2016/05/26/API%E6%8E%A5%E5%8F%A3%E8%A7%84%E8%8C%83/"/>
+    <id>http://jiuzhou-romens.github.io.git/2016/05/26/API接口规范/</id>
+    <published>2016-05-26T02:27:09.000Z</published>
+    <updated>2016-05-26T02:27:09.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="安全机制">安全机制</h2><p>登录安全：</p>
+<ol>
+<li>密码登录后，服务器返回token给客户端</li>
+<li>客户端保存token，每次发起请求时必须带上token</li>
+<li>服务器检查token，若无效：<ol>
+<li>token错误，则重新登录，刷新token</li>
+<li>token过期，发起认证请求，获取新token<br>每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。<br>纯app端可以采用另一种方式：<br>不用密码登录，直接手机号加短信验证码登录，好处：</li>
+</ol>
+</li>
+<li>用不着重置密码操作了</li>
+<li>不需要记密码，不怕密码泄露<a id="more"></a>
+<h2 id="接口数据设计">接口数据设计</h2>采用json格式传输，json的值只有6种：</li>
+</ol>
+<ul>
+<li>Number：整数或浮点数</li>
+<li>String：字符串</li>
+<li>Boolean：true或false</li>
+<li>Array：数组包含在方括号[]中</li>
+<li>Object：对象包含在大括号{}中</li>
+<li>Null：空类型</li>
+</ul>
+<p>比如，时间直接用毫秒数表示。</p>
+<h2 id="接口版本设计">接口版本设计</h2><p>两种版本设计：</p>
+<ul>
+<li>每个接口有各自的版本，一般为接口添加个version的参数</li>
+<li>整个接口系统有统一版本，一般在url种添加版本号，比如：<a href="http://api.domain.com/v2" target="_blank" rel="external">http://api.domain.com/v2</a></li>
+</ul>
+<h2 id="接口优化设计">接口优化设计</h2><p>对于移动端来说，流量和速度是考虑的重点，当网络状况不好时，应该返回更简洁的数据</p>
+<ol>
+<li>网络请求不可用或入参错误时，不应该调用api，直接返回</li>
+<li>非wifi网络时，禁止大文件下载和上传</li>
+<li>wifi网络时应该返回更全面的数据</li>
+<li>只返回更新的部分，比如：上一次请求返回了10条按时间排序的数据，第一条数据为最新的，id为101，当发起下一次请求时，将101的id作为参数调用API，API查到该id，发现该id之后又新增了两条数据，API则只返回新增的这两条数据。</li>
+</ol>
+<h2 id="json数据格式：">json数据格式：</h2><p>客户端请求格式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    UserGuid: &lt;string&gt;,             //唯一标识用户的token字符串</span><br><span class="line"></span><br><span class="line">    QueryType: &lt;string&gt;,            //报文数据类型</span><br><span class="line"></span><br><span class="line">    Params: &#123;                       //与queryType对应的具体参数</span><br><span class="line">         "API_VERSION":"v1"         //api接口版本</span><br><span class="line">         "CONNECTION_TYPE":"wifi"   //连接类型</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>服务器返回格式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    code：200</span><br><span class="line">    message: "success"</span><br><span class="line">    data: &#123; key1: value1, key2: value2, ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>code: 状态码，200表示成功，非200表示各种不同的错误，3XX表示客户端错误，4XX表示服务端错误，比如：<ul>
+<li>200：成功</li>
+<li>300：请求错误</li>
+<li>301：缺少appKey</li>
+<li>302：缺少签名</li>
+<li>303：缺少参数</li>
+<li>400：服务器出错</li>
+<li>401：服务不可用</li>
+<li>402：服务器正在重启</li>
+</ul>
+</li>
+<li>message: 描述信息，成功时为”success”，错误时则是对用户友好的错误信息，可以直接展示给客户看</li>
+<li>data: 成功时返回的数据，类型为对象或数组，比如：<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data: &#123; token: 123456 &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
+]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="安全机制">安全机制</h2><p>登录安全：</p>
+<ol>
+<li>密码登录后，服务器返回token给客户端</li>
+<li>客户端保存token，每次发起请求时必须带上token</li>
+<li>服务器检查token，若无效：<ol>
+<li>token错误，则重新登录，刷新token</li>
+<li>token过期，发起认证请求，获取新token<br>每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。<br>纯app端可以采用另一种方式：<br>不用密码登录，直接手机号加短信验证码登录，好处：</li>
+</ol>
+</li>
+<li>用不着重置密码操作了</li>
+<li>不需要记密码，不怕密码泄露]]>
+    
+    </summary>
+    
+      <category term="API" scheme="http://jiuzhou-romens.github.io.git/tags/API/"/>
+    
+      <category term="总结" scheme="http://jiuzhou-romens.github.io.git/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="dev" scheme="http://jiuzhou-romens.github.io.git/categories/dev/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Andriod 架构设计]]></title>

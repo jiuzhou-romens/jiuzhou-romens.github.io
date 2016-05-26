@@ -3,20 +3,36 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Markdown学习指南 | 赵九州的博客</title>
+  <title>API 接口规范 | 赵九州的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Markdown的语法已经足够简单，但是现有的Markdown语法说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从作业部落到简书，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 Markdown 语法。">
+  <meta name="description" content="安全机制登录安全：
+
+密码登录后，服务器返回token给客户端
+客户端保存token，每次发起请求时必须带上token
+服务器检查token，若无效：
+token错误，则重新登录，刷新token
+token过期，发起认证请求，获取新token每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。纯app端可以采用另一种方式：不用密码登">
 <meta property="og:type" content="article">
-<meta property="og:title" content="Markdown学习指南">
-<meta property="og:url" content="http://jiuzhou-romens.github.io.git/2015/11/24/Markdown/index.html">
+<meta property="og:title" content="API 接口规范">
+<meta property="og:url" content="http://jiuzhou-romens.github.io.git/2016/05/26/API接口规范/index.html">
 <meta property="og:site_name" content="赵九州的博客">
-<meta property="og:description" content="Markdown的语法已经足够简单，但是现有的Markdown语法说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从作业部落到简书，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 Markdown 语法。">
-<meta property="og:image" content="http://www.geovyn.com/images/avatar.jpg">
-<meta property="og:image" content="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1">
-<meta property="og:updated_time" content="2015-11-24T06:39:59.000Z">
+<meta property="og:description" content="安全机制登录安全：
+
+密码登录后，服务器返回token给客户端
+客户端保存token，每次发起请求时必须带上token
+服务器检查token，若无效：
+token错误，则重新登录，刷新token
+token过期，发起认证请求，获取新token每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。纯app端可以采用另一种方式：不用密码登">
+<meta property="og:updated_time" content="2016-05-26T02:27:09.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Markdown学习指南">
-<meta name="twitter:description" content="Markdown的语法已经足够简单，但是现有的Markdown语法说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从作业部落到简书，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 Markdown 语法。">
+<meta name="twitter:title" content="API 接口规范">
+<meta name="twitter:description" content="安全机制登录安全：
+
+密码登录后，服务器返回token给客户端
+客户端保存token，每次发起请求时必须带上token
+服务器检查token，若无效：
+token错误，则重新登录，刷新token
+token过期，发起认证请求，获取新token每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。纯app端可以采用另一种方式：不用密码登">
   
     <link rel="alternative" href="/atom.xml" title="赵九州的博客" type="application/atom+xml">
   
@@ -191,11 +207,11 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap"><article id="post-Markdown" class="article article-type-post" itemscope itemprop="blogPost">
+      <div class="body-wrap"><article id="post-API接口规范" class="article article-type-post" itemscope itemprop="blogPost">
   
     <div class="article-meta">
-      <a href="/2015/11/24/Markdown/" class="article-date">
-  	<time datetime="2015-11-24T06:39:59.000Z" itemprop="datePublished">Nov 24 2015</time>
+      <a href="/2016/05/26/API接口规范/" class="article-date">
+  	<time datetime="2016-05-26T02:27:09.000Z" itemprop="datePublished">May 26 2016</time>
 </a>
     </div>
   
@@ -208,7 +224,7 @@
         
   
     <h1 class="article-title" itemprop="name">
-      Markdown学习指南
+      API 接口规范
     </h1>
   
 
@@ -217,10 +233,14 @@
       <div class="article-info article-info-post">
         
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Markdown/">Markdown</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/API/">API</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
 	</div>
 
         
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/dev/">dev</a>
+	</div>
+
 
         <div class="clearfix"></div>
       </div>
@@ -228,65 +248,57 @@
     
     <div class="article-entry" itemprop="articleBody">
       
-        <p> Markdown的语法已经足够简单，但是现有的<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法</a>说明更多的是写给web从业者看的，对于很多写作者来说，学习起来效率很低，从<a href="https://www.zybuluo.com/mdeditor" target="_blank" rel="external">作业部落</a>到<a href="http://www.jianshu.com/" target="_blank" rel="external">简书</a>，从写作者的实际需求出发，总结真正实用的常用格式，深入浅出 <code>Markdown</code> 语法。<br> <a id="more"></a></p>
-<h1 id="标题">标题</h1><p>这是最为常用的格式，在<code>Markdown</code>中，你只需要在文本前面加上<code>#</code>号，标题分级，增加<code>#</code>即可。</p>
-<blockquote>
-<h1 id="一级标题">一级标题</h1><h2 id="二级标题">二级标题</h2><h3 id="三级标题">三级标题</h3><h4 id="四级标题">四级标题</h4><h5 id="五级标题">五级标题</h5><h6 id="六级标题">六级标题</h6></blockquote>
-<p>注意：<code>#</code>和<code>一级标题</code>之间保留一个空格，这才是<code>Markdown</code>的标准写法。</p>
-<h1 id="列表">列表</h1><p>列表格式也很常用，在 Markdown 中，你只需要在文字前面加上<code>-</code>(无序)或者<code>1.</code>(有序)就可以了，例如：</p>
-<blockquote>
-<ul>
-<li>参考文本1</li>
-<li>参考文本2</li>
-<li>参考文本3</li>
-</ul>
+        <h2 id="安全机制">安全机制</h2><p>登录安全：</p>
 <ol>
-<li>参考文本1</li>
-<li>参考文本2</li>
-<li>参考文本3</li>
+<li>密码登录后，服务器返回token给客户端</li>
+<li>客户端保存token，每次发起请求时必须带上token</li>
+<li>服务器检查token，若无效：<ol>
+<li>token错误，则重新登录，刷新token</li>
+<li>token过期，发起认证请求，获取新token<br>每个端分配一个加密的appKey，android、ios、pc、微信等每个端一个appKey，相当于另一个token。<br>纯app端可以采用另一种方式：<br>不用密码登录，直接手机号加短信验证码登录，好处：</li>
 </ol>
-</blockquote>
-<p>注意：<code>-</code> <code>1.</code>和参考文本之间保留一个空格。</p>
-<h1 id="链接和图片">链接和图片</h1><p>在<code>Markdown</code>中，插入链接你只需要使用<code>[显示文本](链接地址)</code> 这样的语法即可，例如：<br><a href="http://www.geovyn.com" target="_blank" rel="external">我的博客</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">[我的博客](http://www.geovyn.com)</span><br></pre></td></tr></table></figure></p>
-<p>在<code>Markdown</code>中，插入图片你只需要使用 <code>![](图片地址)</code> 这样的语法即可，例如：<br><img src="http://www.geovyn.com/images/avatar.jpg" alt=""><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">![](http://www.geovyn.com/images/avatar.jpg)</span><br></pre></td></tr></table></figure></p>
-<h1 id="引用">引用</h1><p>写作的时候需要引用他人的文字，这个时候引用这个格式就很有必要了，在<code>Markdown</code>中，你只需要在你希望引用的文字前面加上<code>&gt;</code>就好了。例如：</p>
-<blockquote>
-<p>床前明月光<br>疑是地上霜<br>举头望明月<br>低头思故乡</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">&gt; 床前明月光</span><br><span class="line">&gt; 疑是地上霜</span><br><span class="line">&gt; 举头望明月</span><br><span class="line">&gt; 低头思故乡</span><br></pre></td></tr></table></figure>
-<h1 id="粗体和斜体">粗体和斜体</h1><p>用两个<code>*</code>包含一段文本就是粗体的语法，用一个<code>*</code>包含一段文本就是斜体的语法。例如：<br>    <strong>2015</strong> <em>美好开始</em><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">**<span class="number">2015</span>** *美好开始*</span><br></pre></td></tr></table></figure></p>
-<h1 id="表格">表格</h1><p>默认居左,<code>:----:</code>居中,<code>-----:</code>居右。</p>
-<table>
-<thead>
-<tr>
-<th>姓名:</th>
-<th style="text-align:center">性别:</th>
-<th style="text-align:right">年龄:</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>张三</td>
-<td style="text-align:center">男</td>
-<td style="text-align:right">18</td>
-</tr>
-<tr>
-<td>李四</td>
-<td style="text-align:center">男</td>
-<td style="text-align:right">19</td>
-</tr>
-<tr>
-<td>王小妹</td>
-<td style="text-align:center">女</td>
-<td style="text-align:right">20</td>
-</tr>
-</tbody>
-</table>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">| 姓名:          | 性别:         | 年龄:  |</span><br><span class="line">| ------------- |:-------------:|-----:|</span><br><span class="line">| 张三           | 男            | <span class="number">18</span>    |</span><br><span class="line">| 李四           | 男            | <span class="number">19</span>    |</span><br><span class="line">| 王小妹         | 女            | <span class="number">20</span>    |</span><br></pre></td></tr></table></figure>
-<h1 id="显示链接中带括号的图片">显示链接中带括号的图片</h1><p><img src="http://latex.codecogs.com/gif.latex?\prod%20\(n_{i}\)+1" alt=""></p>
-<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line">![][<span class="number">1</span>]</span><br><span class="line">[<span class="number">1</span>]: http://latex.codecogs.com/gif.latex?\prod%<span class="number">20</span>\(n_&#123;i&#125;\)+<span class="number">1</span></span><br></pre></td></tr></table></figure>
-<h1 id="阅读更多">阅读更多</h1><p>使用代码<code>&lt;!-- more --&gt;</code>即可。</p>
-<h1 id="结语">结语</h1><p>以上几种格式是比较常用的格式，对于写作来说应该基本够用了，如果想了解跟多可以参考<a href="http://wowubuntu.com/markdown/" target="_blank" rel="external">Markdown语法说明</a>。<br>强烈建议您现在就立马用 Markdown 写一篇文章吧，体会一下 Markdown 的优雅之处！</p>
+</li>
+<li>用不着重置密码操作了</li>
+<li>不需要记密码，不怕密码泄露<a id="more"></a>
+<h2 id="接口数据设计">接口数据设计</h2>采用json格式传输，json的值只有6种：</li>
+</ol>
+<ul>
+<li>Number：整数或浮点数</li>
+<li>String：字符串</li>
+<li>Boolean：true或false</li>
+<li>Array：数组包含在方括号[]中</li>
+<li>Object：对象包含在大括号{}中</li>
+<li>Null：空类型</li>
+</ul>
+<p>比如，时间直接用毫秒数表示。</p>
+<h2 id="接口版本设计">接口版本设计</h2><p>两种版本设计：</p>
+<ul>
+<li>每个接口有各自的版本，一般为接口添加个version的参数</li>
+<li>整个接口系统有统一版本，一般在url种添加版本号，比如：<a href="http://api.domain.com/v2" target="_blank" rel="external">http://api.domain.com/v2</a></li>
+</ul>
+<h2 id="接口优化设计">接口优化设计</h2><p>对于移动端来说，流量和速度是考虑的重点，当网络状况不好时，应该返回更简洁的数据</p>
+<ol>
+<li>网络请求不可用或入参错误时，不应该调用api，直接返回</li>
+<li>非wifi网络时，禁止大文件下载和上传</li>
+<li>wifi网络时应该返回更全面的数据</li>
+<li>只返回更新的部分，比如：上一次请求返回了10条按时间排序的数据，第一条数据为最新的，id为101，当发起下一次请求时，将101的id作为参数调用API，API查到该id，发现该id之后又新增了两条数据，API则只返回新增的这两条数据。</li>
+</ol>
+<h2 id="json数据格式：">json数据格式：</h2><p>客户端请求格式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    UserGuid: &lt;string&gt;,             //唯一标识用户的token字符串</span><br><span class="line"></span><br><span class="line">    QueryType: &lt;string&gt;,            //报文数据类型</span><br><span class="line"></span><br><span class="line">    Params: &#123;                       //与queryType对应的具体参数</span><br><span class="line">         "API_VERSION":"v1"         //api接口版本</span><br><span class="line">         "CONNECTION_TYPE":"wifi"   //连接类型</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<p>服务器返回格式：<br><figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">&#123;</span><br><span class="line">    code：200</span><br><span class="line">    message: "success"</span><br><span class="line">    data: &#123; key1: value1, key2: value2, ... &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></p>
+<ul>
+<li>code: 状态码，200表示成功，非200表示各种不同的错误，3XX表示客户端错误，4XX表示服务端错误，比如：<ul>
+<li>200：成功</li>
+<li>300：请求错误</li>
+<li>301：缺少appKey</li>
+<li>302：缺少签名</li>
+<li>303：缺少参数</li>
+<li>400：服务器出错</li>
+<li>401：服务不可用</li>
+<li>402：服务器正在重启</li>
+</ul>
+</li>
+<li>message: 描述信息，成功时为”success”，错误时则是对用户友好的错误信息，可以直接展示给客户看</li>
+<li>data: 成功时返回的数据，类型为对象或数组，比如：<figure class="highlight"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">data: &#123; token: 123456 &#125;</span><br></pre></td></tr></table></figure></li>
+</ul>
 
       
     </div>
@@ -296,18 +308,9 @@
     
 <nav id="article-nav">
   
-    <a href="/2015/11/24/Xcode--插件管理/" id="article-nav-newer" class="article-nav-link-wrap">
-      <strong class="article-nav-caption"><</strong>
-      <div class="article-nav-title">
-        
-          Xcode插件管理
-        
-      </div>
-    </a>
   
-  
-    <a href="/2015/11/24/Hexo主题/" id="article-nav-older" class="article-nav-link-wrap">
-      <div class="article-nav-title">Hexo主题Yilia</div>
+    <a href="/2016/05/26/Android项目架构设计/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Andriod 架构设计</div>
       <strong class="article-nav-caption">></strong>
     </a>
   
@@ -336,7 +339,7 @@
 
   <section id="comments">
     <!-- 多说评论框 start -->
-    <div class="ds-thread" data-thread-key="post-Markdown" data-title="Markdown学习指南" data-url="http://jiuzhou-romens.github.io.git/2015/11/24/Markdown/"></div>
+    <div class="ds-thread" data-thread-key="post-API接口规范" data-title="API 接口规范" data-url="http://jiuzhou-romens.github.io.git/2016/05/26/API接口规范/"></div>
     <!-- 多说评论框 end -->
     <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
     <script type="text/javascript">
