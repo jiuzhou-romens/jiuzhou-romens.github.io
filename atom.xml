@@ -4,7 +4,7 @@
   <subtitle><![CDATA[虽然咸鱼翻身还是咸鱼,但至少可以变得好吃一点...]]></subtitle>
   <link href="/atom.xml" rel="self"/>
   <link href="http://jiuzhou-romens.github.io.git/"/>
-  <updated>2016-05-26T02:13:14.000Z</updated>
+  <updated>2016-05-26T02:23:05.000Z</updated>
   <id>http://jiuzhou-romens.github.io.git/</id>
   
   <author>
@@ -13,6 +13,73 @@
   </author>
   
   <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title><![CDATA[Andriod 架构设计]]></title>
+    <link href="http://jiuzhou-romens.github.io.git/2016/05/26/Android%E9%A1%B9%E7%9B%AE%E6%9E%B6%E6%9E%84%E8%AE%BE%E8%AE%A1/"/>
+    <id>http://jiuzhou-romens.github.io.git/2016/05/26/Android项目架构设计/</id>
+    <published>2016-05-26T02:23:05.000Z</published>
+    <updated>2016-05-26T02:23:05.000Z</updated>
+    <content type="html"><![CDATA[<h2 id="1-_架构出发点">1. 架构出发点</h2><ul>
+<li>可测试</li>
+<li>可读性高</li>
+<li>单一职责</li>
+<li>依赖倒置</li>
+<li>低耦合、高内聚</li>
+<li>易于扩展<a id="more"></a>
+<h2 id="2-_架构思想">2. 架构思想</h2><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/clean_architecture_android.png" alt="Dependency Rule"></li>
+</ul>
+<p>分为三层：</p>
+<ul>
+<li><strong>presentation</strong>，使用mvp模式，解耦界面与逻辑，易于修改界面，与domain层通过UseCase即Interactor进行交互。</li>
+<li><strong>domain</strong>，业务逻辑。</li>
+<li><strong>data</strong>，实现网络或本地存储的具体细节，与domain层采用repository模式交互，解耦业务逻辑与数据底层。</li>
+</ul>
+<h2 id="3-_架构细节">3. 架构细节</h2><p>presentation和data层有各自的数据实体，presentation层的model及data层的entity，在domain层使用mapper进行转换。</p>
+<p>presentation层实现了mvp模式，v主要是fragment，activity尽量只作为fragment的容器存在，作为fragment的控制器。</p>
+<p>domain层主要包含：</p>
+<ul>
+<li>interactor，usecase，每一个异步数据请求的入口</li>
+<li>repository，data层的接口</li>
+<li>mapper，作为另外两层数据的转化器</li>
+<li>executor，线程控制器，ThreadExecutor作为后台线程，PostExecutionThread作为android的ui线程</li>
+</ul>
+<p>data层主要包含：</p>
+<ul>
+<li>cache，数据存储抽象</li>
+<li>net，网络层请求封装</li>
+<li>repository，实现domain层中的repository接口</li>
+</ul>
+<h2 id="4-_使用的第三方库">4. 使用的第三方库</h2><ul>
+<li>dagger2，主要为了解耦对象的使用与构建，使得mock更加容易，便于unit test</li>
+<li>butterKnife，view注入库，增加可读性</li>
+<li>RxJava，避免callback hell，使代码逻辑更加清晰</li>
+<li>okhttp3+retrofit2，使网络请求更加简单清晰，解耦</li>
+<li>stetho，用来查看网络请求、view的hierarchy、本地存储详情</li>
+<li>mockito+junit4，使mock对象更加容易，易于写单元测试</li>
+<li>robolectric，模拟android环境，测试data层</li>
+<li>espresso，ui自动化测试，测试presentation层</li>
+<li>leakCanary，内存泄露测试</li>
+</ul>
+<h2 id="参考文档">参考文档</h2><h6 id="Clean_architecture"><a href="http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/" target="_blank" rel="external">Clean architecture</a></h6>]]></content>
+    <summary type="html">
+    <![CDATA[<h2 id="1-_架构出发点">1. 架构出发点</h2><ul>
+<li>可测试</li>
+<li>可读性高</li>
+<li>单一职责</li>
+<li>依赖倒置</li>
+<li>低耦合、高内聚</li>
+<li>易于扩展]]>
+    
+    </summary>
+    
+      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/tags/Android/"/>
+    
+      <category term="总结" scheme="http://jiuzhou-romens.github.io.git/tags/%E6%80%BB%E7%BB%93/"/>
+    
+      <category term="Android" scheme="http://jiuzhou-romens.github.io.git/categories/Android/"/>
+    
+  </entry>
   
   <entry>
     <title><![CDATA[Andriod 开发规范]]></title>

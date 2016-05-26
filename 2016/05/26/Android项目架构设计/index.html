@@ -3,17 +3,37 @@
 <head>
   <meta charset="utf-8">
   
-  <title>Tag: Alcatraz | 赵九州的博客</title>
+  <title>Andriod 架构设计 | 赵九州的博客</title>
   <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
-  <meta name="description" content="Walk steps step by step.">
-<meta property="og:type" content="website">
-<meta property="og:title" content="赵九州的博客">
-<meta property="og:url" content="http://jiuzhou-romens.github.io.git/tags/Alcatraz/index.html">
+  <meta name="description" content="1. 架构出发点
+可测试
+可读性高
+单一职责
+依赖倒置
+低耦合、高内聚
+易于扩展">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Andriod 架构设计">
+<meta property="og:url" content="http://jiuzhou-romens.github.io.git/2016/05/26/Android项目架构设计/index.html">
 <meta property="og:site_name" content="赵九州的博客">
-<meta property="og:description" content="Walk steps step by step.">
+<meta property="og:description" content="1. 架构出发点
+可测试
+可读性高
+单一职责
+依赖倒置
+低耦合、高内聚
+易于扩展">
+<meta property="og:image" content="http://7xs8qe.com2.z0.glb.qiniucdn.com/clean_architecture_android.png">
+<meta property="og:updated_time" content="2016-05-26T02:23:05.000Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="赵九州的博客">
-<meta name="twitter:description" content="Walk steps step by step.">
+<meta name="twitter:title" content="Andriod 架构设计">
+<meta name="twitter:description" content="1. 架构出发点
+可测试
+可读性高
+单一职责
+依赖倒置
+低耦合、高内聚
+易于扩展">
   
     <link rel="alternative" href="/atom.xml" title="赵九州的博客" type="application/atom+xml">
   
@@ -188,53 +208,145 @@
 		</header>				
 	</div>
 </nav>
-      <div class="body-wrap">
+      <div class="body-wrap"><article id="post-Android项目架构设计" class="article article-type-post" itemscope itemprop="blogPost">
   
-  
-    
-    
-      
-      
-      <section class="archives-wrap">
-        <div class="archive-year-wrap">
-          <a href="/archives/2015" class="archive-year">2015</a>
-        </div>
-        <div class="archives">
-    
-    <article class="archive-article archive-type-post">
-  <div class="archive-article-inner">
-    <header class="archive-article-header">
-      	<div class="article-meta">
-	      	<a href="/2015/11/24/Xcode--插件管理/" class="archive-article-date">
-  	<time datetime="2015-11-24T10:30:28.000Z" itemprop="datePublished">Nov 24</time>
+    <div class="article-meta">
+      <a href="/2016/05/26/Android项目架构设计/" class="article-date">
+  	<time datetime="2016-05-26T02:23:05.000Z" itemprop="datePublished">May 26 2016</time>
 </a>
-        </div>
-    	 
+    </div>
   
-    <h1 itemprop="name">
-      <a class="archive-article-title" href="/2015/11/24/Xcode--插件管理/">Xcode插件管理</a>
+  <div class="article-inner">
+    
+      <input type="hidden" class="isFancy" />
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="article-title" itemprop="name">
+      Andriod 架构设计
     </h1>
   
 
-        <div class="article-info info-on-right">
-          
+      </header>
+      
+      <div class="article-info article-info-post">
+        
 	<div class="article-tag tagcloud">
-		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Alcatraz/">Alcatraz</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Xcode/">Xcode</a></li></ul>
+		<ul class="article-tag-list"><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/Android/">Android</a></li><li class="article-tag-list-item"><a class="article-tag-list-link" href="/tags/总结/">总结</a></li></ul>
 	</div>
 
-          
+        
+	<div class="article-category tagcloud">
+	<a class="article-category-link" href="/categories/Android/">Android</a>
+	</div>
 
-        </div>
+
         <div class="clearfix"></div>
-    </header>
-  </div>
-</article>
-  
-  
-    </div></section>
-  
-
+      </div>
+      
     
+    <div class="article-entry" itemprop="articleBody">
+      
+        <h2 id="1-_架构出发点">1. 架构出发点</h2><ul>
+<li>可测试</li>
+<li>可读性高</li>
+<li>单一职责</li>
+<li>依赖倒置</li>
+<li>低耦合、高内聚</li>
+<li>易于扩展<a id="more"></a>
+<h2 id="2-_架构思想">2. 架构思想</h2><img src="http://7xs8qe.com2.z0.glb.qiniucdn.com/clean_architecture_android.png" alt="Dependency Rule"></li>
+</ul>
+<p>分为三层：</p>
+<ul>
+<li><strong>presentation</strong>，使用mvp模式，解耦界面与逻辑，易于修改界面，与domain层通过UseCase即Interactor进行交互。</li>
+<li><strong>domain</strong>，业务逻辑。</li>
+<li><strong>data</strong>，实现网络或本地存储的具体细节，与domain层采用repository模式交互，解耦业务逻辑与数据底层。</li>
+</ul>
+<h2 id="3-_架构细节">3. 架构细节</h2><p>presentation和data层有各自的数据实体，presentation层的model及data层的entity，在domain层使用mapper进行转换。</p>
+<p>presentation层实现了mvp模式，v主要是fragment，activity尽量只作为fragment的容器存在，作为fragment的控制器。</p>
+<p>domain层主要包含：</p>
+<ul>
+<li>interactor，usecase，每一个异步数据请求的入口</li>
+<li>repository，data层的接口</li>
+<li>mapper，作为另外两层数据的转化器</li>
+<li>executor，线程控制器，ThreadExecutor作为后台线程，PostExecutionThread作为android的ui线程</li>
+</ul>
+<p>data层主要包含：</p>
+<ul>
+<li>cache，数据存储抽象</li>
+<li>net，网络层请求封装</li>
+<li>repository，实现domain层中的repository接口</li>
+</ul>
+<h2 id="4-_使用的第三方库">4. 使用的第三方库</h2><ul>
+<li>dagger2，主要为了解耦对象的使用与构建，使得mock更加容易，便于unit test</li>
+<li>butterKnife，view注入库，增加可读性</li>
+<li>RxJava，避免callback hell，使代码逻辑更加清晰</li>
+<li>okhttp3+retrofit2，使网络请求更加简单清晰，解耦</li>
+<li>stetho，用来查看网络请求、view的hierarchy、本地存储详情</li>
+<li>mockito+junit4，使mock对象更加容易，易于写单元测试</li>
+<li>robolectric，模拟android环境，测试data层</li>
+<li>espresso，ui自动化测试，测试presentation层</li>
+<li>leakCanary，内存泄露测试</li>
+</ul>
+<h2 id="参考文档">参考文档</h2><h6 id="Clean_architecture"><a href="http://fernandocejas.com/2015/07/18/architecting-android-the-evolution/" target="_blank" rel="external">Clean architecture</a></h6>
+      
+    </div>
+    
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2016/05/26/Android开发规范/" id="article-nav-older" class="article-nav-link-wrap">
+      <div class="article-nav-title">Andriod 开发规范</div>
+      <strong class="article-nav-caption">></strong>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+<div class="share">
+	<!-- JiaThis Button BEGIN -->
+	<div class="jiathis_style">
+		<span class="jiathis_txt">分享到：</span>
+		<a class="jiathis_button_tsina"></a>
+		<a class="jiathis_button_cqq"></a>
+		<a class="jiathis_button_douban"></a>
+		<a class="jiathis_button_weixin"></a>
+		<a class="jiathis_button_tumblr"></a>
+		<a href="http://www.jiathis.com/share" class="jiathis jiathis_txt jtico jtico_jiathis" target="_blank"></a>
+	</div>
+	<script type="text/javascript" src="http://v3.jiathis.com/code/jia.js?uid=1405949716054953" charset="utf-8"></script>
+	<!-- JiaThis Button END -->
+</div>
+
+
+
+  <section id="comments">
+    <!-- 多说评论框 start -->
+    <div class="ds-thread" data-thread-key="post-Android项目架构设计" data-title="Andriod 架构设计" data-url="http://jiuzhou-romens.github.io.git/2016/05/26/Android项目架构设计/"></div>
+    <!-- 多说评论框 end -->
+    <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
+    <script type="text/javascript">
+    var duoshuoQuery = {short_name:'Jiuzhou'};
+      (function() {
+        var ds = document.createElement('script');
+        ds.type = 'text/javascript';ds.async = true;
+        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+        ds.charset = 'UTF-8';
+        (document.getElementsByTagName('head')[0] 
+         || document.getElementsByTagName('body')[0]).appendChild(ds);
+      })();
+      </script>
+    <!-- 多说公共JS代码 end -->
+  </section>
+  
 
 </div>
       <footer id="footer">
@@ -260,9 +372,9 @@
 		mathjax: true,
 		animate: true,
 		isHome: false,
-		isPost: false,
+		isPost: true,
 		isArchive: false,
-		isTag: true,
+		isTag: false,
 		isCategory: false,
 		open_in_new: false
 	}
